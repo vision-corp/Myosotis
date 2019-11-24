@@ -34,6 +34,7 @@
     </label>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
+  <a href="/visible/visible.php">Retour</a>
   <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
 </form>
 </body>

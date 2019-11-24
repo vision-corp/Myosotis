@@ -107,3 +107,7 @@ body {
 .svg1 {
   background-image: url(/images/test1.jpg);
 }
+
+titreSlide {
+  color: red;
+}
