@@ -9,7 +9,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img src="/images/tableExterieur.jpg">
+          <img src="/images/tableExterieur.jpg" class="img-thumbnail rounded">
         </div>
       </div>
 
@@ -21,7 +21,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-6 order-md-1">
-          <img src="/images/interieur.jpg">
+          <img src="/images/interieur.jpg" class="img-thumbnail rounded">
         </div>
       </div>
 
@@ -33,7 +33,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-5">
-          <img src="/images/fleursExterieur.JPG">
+          <img src="/images/fleursExterieur.JPG" class="img-thumbnail rounded">
         </div>
       </div>
 
@@ -43,7 +43,7 @@
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
         </div>
         <div class="col-md-6 order-md-1">
-          <img src="/images/batimentEntier.jpg">
+          <img src="/images/batimentEntier.jpg" class="img-thumbnail rounded">
         </div>
       </div>
 
