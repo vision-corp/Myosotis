@@ -1,2 +1,2 @@
 # Myosotis
-Site de présentation du site Myosotis
+Site de présentation pour les Myosotis
