@@ -1,7 +1,10 @@
 <!-- FOOTER -->
 <footer class="container">
     <p class="float-right"><a href="/visible/visible.php">Retour en haut</a></p>
-    <p>Les Myosotis · <a href="/visible/visible.php">Mentions légales</a> 
+
+    <!-- Modal des mentions légales -->
+    <?php require '_modal-MentionsLegales.php'; ?>
+    <p>Les Myosotis · <a href="/visible/visible.php" data-toggle="modal" data-target="#exampleModalScrollable">Mentions légales</a>
   </footer>
 </main>
 <script src="../js/jquery.js"></script>
