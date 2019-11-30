@@ -12,8 +12,8 @@
       <img src="/images/batiment.jpg">
         <div class="container">
           <div class="carousel-caption text-left">
-            <h1 class="titreSlide">Bienvenue sur le site de l'associaiton Les Myosotis</h1>
-            <p class="shadow">Cette association accueillle des personnes dépendantes quelques jours par semaine. Cela leur permet de sortir et entretenir une vie sociale malgrès les coups dur de la vie.</p>
+            <h1 class="titreSlide tshadow">Bienvenue sur le site de l'associaiton Les Myosotis</h1>
+            <p class="tshadow">Cette association accueillle des personnes dépendantes quelques jours par semaine. Cela leur permet de sortir et entretenir une vie sociale malgrès les coups dur de la vie.</p>
             <p><a class="btn btn-lg btn-success" href="/visible/presentation.php" role="button">En savoir plus</a></p>
           </div>
         </div>
@@ -22,8 +22,8 @@
         <img src="/images/exterieur.jpg">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Un espace chalereur</h1>
-            <p>Les accueillis disposent de locaux récents et adaptés et d'un extérieur fleuri et aéré pour leur permettre de passer du bon temps, dans un confort plus qu'exceptionnel.</p>
+            <h1 class="tshadow">Un espace chalereur</h1>
+            <p class="tshadow">Les accueillis disposent de locaux récents et adaptés et d'un extérieur fleuri et aéré pour leur permettre de passer du bon temps, dans un confort plus qu'exceptionnel.</p>
             <p><a class="btn btn-lg btn-success" href="/visible/presentation.php" role="button">En savoir plus</a></p>
           </div>
         </div>
@@ -32,8 +32,8 @@
         <img src="/images/animation.jpg">
         <div class="container">
           <div class="carousel-caption text-right">
-            <h1>Des animations diversifiés</h1>
-            <p>De la musique en passant par la danse ou le théâtre, un tas d'activités de qualié sont proposées et animées par un personnel hautement qualifié.</p>
+            <h1 class="tshadow">Des animations diversifiés</h1>
+            <p class="tshadow">De la musique en passant par la danse ou le théâtre, un tas d'activités de qualié sont proposées et animées par un personnel hautement qualifié.</p>
             <p><a class="btn btn-lg btn-success" href="/visible/presentation.php" role="button">En savoir plus</a></p>
           </div>
         </div>
