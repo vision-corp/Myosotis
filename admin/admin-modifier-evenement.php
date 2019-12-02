@@ -1,4 +1,11 @@
-<!-- header -->
+<!--*
+    * admin-modifier-evenement.php
+    * author Info2 IUT Rodez 2019-2020
+    *
+    * Permet de modifier un événement
+-->
+
+<!-- Inclusion de l'entête -->
 <?php require 'includes/header.php'; ?>
 
 <!-- Corps de la page -->
@@ -52,7 +59,6 @@
                 </div>
             </div>
 
-
             <div class="mb-3">
                 <label for="contenu">Description</label>
                 <textarea name="contenu" id="contenu" rows="8" cols="80" class="form-control"></textarea>
@@ -69,7 +75,6 @@
             <input type="submtit" class="btn btn-primary btn-lg btn-block" value="Enregistrer">
         </form>
     </div>
-
 </main>
 
 <!-- footer -->
