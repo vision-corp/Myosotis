@@ -1,4 +1,9 @@
-<!-- Modal -->
+<!--*
+    * _modal-conditions-formulaire.php
+    * author Info2 IUT Rodez 2019-2020
+    *
+    * Affiche les conditions d'utilisation du formulaire de contact
+-->
 <div class="modal fade" id="modal-conditions-formulaire" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-scrollable" role="document">
         <div class="modal-content">

@@ -20,16 +20,15 @@
         </div>
     </div>
 
-    <!-- Liste des utilisateurs -->
-    <!-- Menu d'ajout d'un utilisateur -->
+    <!-- Formulaire modification evenement -->
     <div class="col-md-8 order-md-1">
         <form class="needs-validation" novalidate>
             <div class="row">
                 <div class="col-md-12 mb-3">
-                    <label for="firstName">Titre</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Titre de l'événement"equired>
+                    <label for="titre">Titre</label>
+                    <input type="text" class="form-control" id="titre" placeholder="Titre de l'événement"equired>
                     <div class="invalid-feedback">
-                        Vous devez entrer un nom d'article valide.
+                        Vous devez entrer un titre d'événement valide.
                     </div>
                 </div>
             </div>
@@ -37,8 +36,8 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Responsable :</label>
-                        <select class="form-control" name="">
+                        <label for="responsable" class="col-form-label">Responsable :</label>
+                        <select class="form-control" name="" id="responsable">
                             <option>User 1</option>
                             <option>User 2</option>
                             <option>User 3</option>
@@ -47,8 +46,8 @@
                 </div>
                 <div class="col-md-6 mb-3">
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Date :</label>
-                        <input type="date" class="form-control">
+                        <label for="date" class="col-form-label">Date :</label>
+                        <input type="date" class="form-control" id="date">
                     </div>
                 </div>
             </div>
@@ -58,7 +57,7 @@
                 <label for="contenu">Description</label>
                 <textarea name="contenu" id="contenu" rows="8" cols="80" class="form-control"></textarea>
                 <div class="invalid-feedback">
-                    Veuillez entrer un texte pour l'article.
+                    Veuillez entrer un texte pour l'événement.
                 </div>
             </div>
 
@@ -66,7 +65,8 @@
 
             </div>
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Enregistrer</button>
+            <!-- Bouton de validation -->
+            <input type="submtit" class="btn btn-primary btn-lg btn-block" value="Enregistrer">
         </form>
     </div>
 

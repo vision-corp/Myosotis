@@ -22,7 +22,7 @@
     </div>
   </div>
 
-  <!-- Liste des utilisateurs -->
+  <!-- Liste des articles -->
   <table class="table">
     <tbody>
       <tr>

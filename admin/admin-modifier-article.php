@@ -10,7 +10,7 @@
     <!-- Titre de la page -->
     <h1 class="h2">Modification article</h1>
 
-    <!-- Boutons d'actions sur la page -->
+    <!-- Bouton de retour -->
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
         <form action="/admin/admin-articles.php">
@@ -20,33 +20,32 @@
     </div>
   </div>
 
-  <!-- Liste des utilisateurs -->
-  <!-- Menu d'ajout d'un utilisateur -->
+  <!-- Formulaire de modification d'article -->
   <div class="col-md-8 order-md-1">
       <form class="needs-validation" novalidate>
         <div class="row">
           <div class="col-md-12 mb-3">
-            <label for="firstName">Titre</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Titre de l'article"equired>
+            <label for="titre">Titre</label>
+            <input type="text" class="form-control" id="titre" placeholder="Titre de l'article"equired>
             <div class="invalid-feedback">
-              Vous devez entrer un nom d'article valide.
+              Vous devez entrer un titre d'article valide.
             </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
-              <label for="username">Image</label>
-              <input type="text" class="form-control" id="username" placeholder="Image de l'article" required>
+              <label for="image">Image</label>
+              <input type="text" class="form-control" id="image" placeholder="Image de l'article" required>
               <div class="invalid-feedback" style="width: 100%;">
-                Un pseudo est requis.
+                Une image est requise.
               </div>
             </div>
           <div class="col-md-6 mb-3">
-              <label for="username">Date</label>
-              <input type="date" class="form-control" id="username" placeholder="Pseudo" required>
+              <label for="date">Date</label>
+              <input type="date" class="form-control" id="date" placeholder="Pseudo" required>
               <div class="invalid-feedback" style="width: 100%;">
-                Un pseudo est requis.
+                Veuillez entrer une date pour cet article.
               </div>
           </div>
         </div>
@@ -64,7 +63,8 @@
 
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Enregistrer</button>
+          <!-- Bouton de validation -->
+          <input type="submtit" class="btn btn-primary btn-lg btn-block" value="Enregistrer">
       </form>
     </div>
 

@@ -20,21 +20,21 @@
     </div>
   </div>
 
-  <!-- Liste des utilisateurs -->
+
   <!-- Menu d'ajout d'un utilisateur -->
   <div class="col-md-8 order-md-1">
       <form class="needs-validation" novalidate>
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="firstName">Prénom</label>
-            <input type="text" class="form-control" id="firstName" placeholder="Prénom"equired>
+            <label for="prenom">Prénom</label>
+            <input type="text" class="form-control" id="prenom" placeholder="Prénom"equired>
             <div class="invalid-feedback">
               Vous devez entrer un prénom valide.
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="lastName">Nom</label>
-            <input type="text" class="form-control" id="lastName" placeholder="Nom"required>
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" id="nom" placeholder="Nom"required>
             <div class="invalid-feedback">
               Vous devez entrer un nom valide.
             </div>
@@ -42,9 +42,9 @@
         </div>
 
         <div class="mb-3">
-          <label for="username">Pseudo</label>
+          <label for="pseudo">Pseudo</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="username" placeholder="Pseudo" required>
+            <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" required>
             <div class="invalid-feedback" style="width: 100%;">
               Un pseudo est requis.
             </div>
@@ -62,8 +62,8 @@
 
         <div class="row">
           <div class="col-md-5 mb-3">
-            <label for="country">Rôle</label>
-            <select class="custom-select d-block w-100" id="country" required>
+            <label for="role">Rôle</label>
+            <select class="custom-select d-block w-100" id="role" required>
               <option value="benevole">Bénévole</option>
               <option>Intervenant</option>
               <option>Autre</option>
@@ -73,15 +73,16 @@
             </div>
           </div>
           <div class="col-md-7 mb-3">
-            <label for="zip">Autres information <span class="text-muted">(Optionnel)</span></label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
+            <label for="autre">Autres information <span class="text-muted">(Optionnel)</span></label>
+            <input type="text" class="form-control" id="autre" placeholder="" required>
             <div class="invalid-feedback">
-              Zip code required.
+              Vous pouvez ajouter des indications sur l'utilisateur.ss
             </div>
           </div>
         </div>
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Enregistrer</button>
+          <!-- Bouton de validation -->
+          <input type="submtit" class="btn btn-primary btn-lg btn-block" value="Enregistrer">
       </form>
     </div>
 

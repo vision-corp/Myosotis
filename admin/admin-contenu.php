@@ -16,6 +16,7 @@
 
                </div>
 
+               <!-- Bouton de retour -->
                <div class="btn-toolbar mb-2 mb-md-0">
                    <div class="btn-group mr-2">
                        <form action="/admin/admin-articles.php">
@@ -27,6 +28,8 @@
 
            </div>
             <br/>
+
+           <!-- Liste des posibilités de personalisaiton du site -->
            <form action="">
                <div class="row">
                    <h5>Accueil</h5>

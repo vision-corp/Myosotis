@@ -14,7 +14,7 @@
     <!-- Titre de la page -->
     <h1 class="h2">Gestion des utilisateurs</h1>
 
-    <!-- Boutons d'actions sur la page -->
+    <!-- Boutons pour ajouter un utilisateur -->
     <div class="btn-toolbar mb-2 mb-md-0">
       <div class="btn-group mr-2">
         <form action="/admin/admin-ajout-user.php" method="post">
@@ -24,8 +24,8 @@
     </div>
   </div>
 
-  <!-- Liste des utilisateurs -->
 
+  <!-- Liste des utilisateurs -->
   <table class="table">
     <tbody>
       <tr>

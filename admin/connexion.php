@@ -24,16 +24,17 @@
   <div class="alert alert-danger" role="alert">
     Identifiants incorrects
   </div>
-  <label for="inputEmail" class="sr-only">Email</label>
-  <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-  <label for="inputPassword" class="sr-only">Mot de passe</label>
-  <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+  <label for="email" class="sr-only">Email</label>
+  <input type="email" id="email" class="form-control" placeholder="Email" required autofocus>
+  <label for="pass" class="sr-only">Mot de passe</label>
+  <input type="password" id="pass" class="form-control" placeholder="Mot de passe" required>
+
   <div class="checkbox mb-3">
     <label>
       <input type="checkbox" value="remember-me"> Se souvenir de moi
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Se connecter">
   <a href="/index.php">Retour</a>
   <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
 </form>

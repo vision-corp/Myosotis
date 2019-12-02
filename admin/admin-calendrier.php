@@ -12,9 +12,13 @@
 
         <!-- Boutons d'actions sur la page -->
         <div class="btn-toolbar mb-2 mb-md-0">
+
+            <!-- Impression -->
           <div class="btn-group mr-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
           </div>
+
+            <!-- Sélection semaine -->
             <div class="dropdown">
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Cette semaine
@@ -28,7 +32,7 @@
         </div>
       </div>
 
-      <!-- Contenu page -->
+      <!-- Calendrier -->
       <?php require 'includes/calendrier.php' ?>
 
     </main>
