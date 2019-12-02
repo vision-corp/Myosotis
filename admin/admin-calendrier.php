@@ -13,7 +13,6 @@
         <!-- Boutons d'actions sur la page -->
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group mr-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Modifier</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
           </div>
             <div class="dropdown">

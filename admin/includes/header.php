@@ -34,6 +34,7 @@
     <script src="/js/bootstrap.js"></script>
     <script src="/js/perso.js"></script>
 
+
   <!-- Menu horizontal -->
   <nav class="navbar d-none d-md-block navbar-dark bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Les Myosotis</a>

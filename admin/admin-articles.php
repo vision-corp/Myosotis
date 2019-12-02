@@ -40,6 +40,16 @@
         <td class="cellModifier"><a href="/admin/admin-modifier-article.php">Modifier</a></td>
         <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
       </tr>
+      <tr>
+          <td>Article 4</td>
+          <td class="cellModifier"><a href="/admin/admin-modifier-article.php">Modifier</a></td>
+          <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
+      </tr>
+      <tr>
+          <td>Article 5</td>
+          <td class="cellModifier"><a href="/admin/admin-modifier-article.php">Modifier</a></td>
+          <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
+      </tr>
     </tbody>
   </table>
 

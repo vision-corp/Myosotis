@@ -14,6 +14,28 @@
 
       <p>Statistiques, planning du jour, ...</p>
 
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+        <div class="container">
+            <canvas id="visites"></canvas>
+        </div>
+
+        <script>
+            let visites = document.getElementById('visites').getContext('2d');
+
+            let visitesGraph = new Chart(visites, {
+                type:'line',
+                data:{
+                    labels:['Jour 1', 'Jour 2', 'Jour 3', 'Jour 4', 'Jour 5', 'Jour 6', 'Jour 7', 'Jour 8', 'Jour 9',
+                            'Jour 10', 'Jour 11', 'Jour 12', 'Jour 13', 'Jour 14', 'Jour 15'],
+                    datasets:[6, 2, 5, 8, 0, 9, 12, 3, 7, 2, 2, 5, 10, 6, 2]
+                },
+                options:{}
+            });
+        </script>
+
     </main>
 
 <!-- footer -->

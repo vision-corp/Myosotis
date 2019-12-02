@@ -43,6 +43,21 @@
         <td class="cellModifier"><a href="/admin/admin-modifier-user.php">Modifier</a></td>
         <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
       </tr>
+      <tr>
+          <td>User 4</td>
+          <td class="cellModifier"><a href="/admin/admin-modifier-user.php">Modifier</a></td>
+          <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
+      </tr>
+      <tr>
+          <td>User 5</td>
+          <td class="cellModifier"><a href="/admin/admin-modifier-user.php">Modifier</a></td>
+          <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
+      </tr>
+      <tr>
+          <td>User 6</td>
+          <td class="cellModifier"><a href="/admin/admin-modifier-user.php">Modifier</a></td>
+          <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
+      </tr>
     </tbody>
   </table>
 

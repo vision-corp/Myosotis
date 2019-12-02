@@ -42,7 +42,7 @@
     <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate ">
       <h5 class="row align-items-center">
         <span class="date col-1">
-          <a href="" class="text-light badge badge-secondary" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" text-decoration-none>1</a>
+          <a href="" class="text-dark" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat" text-decoration-none>1</a>
         </span>
         <small class="col d-sm-none text-center text-muted">Mercredi</small>
         <span class="col-1"></span>
@@ -67,8 +67,22 @@
         <small class="col d-sm-none text-center text-muted">Vendredi</small>
         <span class="col-1"></span>
       </h5>
-      <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="John Doe" data-toggle="popover" title="Utilisateur 1" data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.\n\n">John Doe</a>
 
+      <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+         title="John <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+         data-toggle="popover"
+         title="Utilisateur 1"
+         data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">John Doe </a>
+
+        <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+           title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+           data-toggle="popover"
+           title="Utilisateur 1"
+           data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
     </div>
     <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate ">
       <h5 class="row align-items-center">
@@ -111,16 +125,175 @@
         <small class="col d-sm-none text-center text-muted">Mercredi</small>
         <span class="col-1"></span>
       </h5>
-      <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Florian Hyver" data-toggle="popover" title="Utilisateur 1" data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.">Florian Hyver</a>
-      <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Tanguy Fenouillot" data-toggle="popover" title="Utilisateur 1" data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.">Tanguy Fenouillot</a>
-    </div>
+        <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+           title="Tanguy Fenouillot <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+           data-toggle="popover"
+           title="Utilisateur 1"
+           data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Tanguy Fenouillot</a>
+
+        <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+           title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+           data-toggle="popover"
+           title="Utilisateur 1"
+           data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>    </div>
     <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate ">
       <h5 class="row align-items-center">
         <span class="date col-1">9</span>
         <small class="col d-sm-none text-center text-muted">Jeudi</small>
         <span class="col-1"></span>
       </h5>
-      <p class="d-sm-none">Pas d'événements</p>
+
+        <div class="scroll d-none d-sm-block">
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+               title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+               title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+               title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
+        </div>
+
+        <div class="d-block d-sm-none">
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+               title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+               title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+               title="Jean-Charles Luans <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Jean-Charles Luans</a>
+
+            <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-warning text-white"
+               title="Animation musical <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+               data-toggle="popover"
+               title="Utilisateur 1"
+               data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Animation musicale</a>
+        </div>
     </div>
     <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate ">
       <h5 class="row align-items-center">
@@ -210,7 +383,13 @@
         <small class="col d-sm-none text-center text-muted">Lundi</small>
         <span class="col-1"></span>
       </h5>
-      <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white" title="Jean-Charles Luans" data-toggle="popover" title="Utilisateur 1" data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.">Jean-Charles Luans</a>
+        <a class="event d-block p-1 pl-2 pr-2 mb-1 rounded text-truncate small bg-info text-white"
+           title="Florian Hyver <a href='' class='text-dark text-right close' data-dismiss='toast' aria-label='Close'>X</a>"
+           data-toggle="popover"
+           title="Utilisateur 1"
+           data-content="Texte associé au travail qu'effectuera la personne, ainsi que les horaires.<br/><br/>
+                        <a href='admin-modifier-evenement.php'>Modifier</a>
+            ">Florian Hyver</a>
     </div>
     <div class="day col-sm p-2 border border-left-0 border-top-0 text-truncate ">
       <h5 class="row align-items-center">

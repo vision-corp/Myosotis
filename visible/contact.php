@@ -1,4 +1,7 @@
-<?php require 'includes/header.php';?>
+<?php
+require 'includes/header.php';
+require 'includes/_modal-conditions-formulaire.php'
+?>
 
 
   <div class="container marketing">
@@ -28,7 +31,7 @@
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
               <label class="form-check-label" for="exampleCheck1">
-              J'accepte les   <a href="#" class="">conditions d'utilisation</a>
+              J'accepte les   <a href="#" class="" data-toggle="modal" data-target="#modal-conditions-formulaire">conditions d'utilisation</a>
               </label>
             </div>
             <button type="submit" class="btn btn-success">Envoyer</button>

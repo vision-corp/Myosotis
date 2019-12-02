@@ -1,4 +1,8 @@
-<?php require 'includes/header.php';?>
+<?php
+
+require 'includes/header.php';
+
+?>
     <div class="container">
       <br/>
       <h1>Présentation</h1>
