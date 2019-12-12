@@ -19,9 +19,11 @@
 namespace yasmf;
 class HttpHelper
 {
-    public static function getParam($name) {
+    public static function getParam($name)
+    {
         if (isset($_GET[$name])) return $_GET[$name];
         if (isset($_POST[$name])) return $_POST[$name];
         return null;
     }
+
 }

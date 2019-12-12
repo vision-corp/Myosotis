@@ -16,16 +16,6 @@
 
         <!-- Titre de la page -->
         <h1 class="h2">Modifier mon profil</h1>
-
-        <!-- Boutons d'actions sur la page -->
-        <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group mr-2">
-                <form action="/views/adminadmin/admin.php">
-                    <input type="submit" name="retour" value="retour" class="btn btn-sm btn-outline-secondary">
-                </form>
-            </div>
-        </div>
-
     </div>
 
     <!-- Formulaire de modification du profil -->

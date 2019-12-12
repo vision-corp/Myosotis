@@ -11,6 +11,10 @@
     require 'includes/modals/ajout-section.php';
     require 'includes/modals/suppr-section.php';
     require 'includes/modals/modification-section.php';
+
+    spl_autoload_extensions(".php");
+    spl_autoload_register();
+    use yasmf\HttpHelper;
 ?>
 
 <!-- Corps de la page -->
@@ -57,21 +61,13 @@
             <!-- Liste des articles -->
             <table class="table">
                 <tbody>
+                <?php while ($row = $findContent->fetch()) { ?>
                 <tr>
-                    <td>Partie 1</td>
+                    <td><?php echo $row['identifiant']; ?></td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
                     <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                 </tr>
-                <tr>
-                    <td>Partie 2</td>
-                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
-                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
-                </tr>
-                <tr>
-                    <td>Partie 3</td>
-                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
-                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
-                </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>

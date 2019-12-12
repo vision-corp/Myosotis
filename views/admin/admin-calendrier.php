@@ -40,27 +40,8 @@
     </div>
 
     <!-- Calendrier -->
-    <?php //require 'includes/calendrier.php' ?>
-    <link href='/fullCallendar/core/main.css' rel='stylesheet' />
-    <link href='/fullCallendar/daygrid/main.css' rel='stylesheet' />
+    <?php require 'includes/calendrier.php' ?>
 
-    <script src='/fullCallendar/core/main.js'></script>
-    <script src='/fullCallendar/daygrid/main.js'></script>
-
-    <script>
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                plugins: [ 'dayGrid' ]
-            });
-
-            calendar.render();
-        });
-
-    </script>
-    <div id='calendar'></div>
 </main>
 
 <!-- footer -->
