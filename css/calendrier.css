@@ -1,3 +1,11 @@
+/**
+ * calendrier.css
+ * author Info2 IUT Rodez 2019-2020
+ *
+ * Style appliqué au classes utilisées par le planning de la partie administration
+ */
+
+/** Version smartphone */
 @media (max-width:575px) {
     .display-4 {
         font-size: 1.5rem;
@@ -12,14 +20,14 @@
     }
 }
 
+/** Version bureau */
 @media (min-width: 576px) {
     .day {
-        /* height: 14.2857vw; */
-
         height: 12.2857vw;
     }
 }
 
+/* Qand trop dévénements à afficher */
 .scroll {
     overflow: scroll !important;
     height: 9.2857vw;

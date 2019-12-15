@@ -18,7 +18,7 @@
  */
 namespace yasmf;
 use PDO;
-class DataSource
+class  DataSource
 {
     private $host;
     private $port;

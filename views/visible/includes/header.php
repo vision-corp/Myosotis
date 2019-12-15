@@ -6,12 +6,11 @@
     * Inclut les feuilles de style et la barre de navigation
 -->
 <!DOCTYPE html>
-<!-- saved from url=(0053)https://getbootstrap.com/docs/4.3/examples/carousel/# -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Florian Hyver, Tom Margalejo, J-Charles Luans, Tanguy Fenouillot, and Bootstrap contributors">
+    <meta name="author" content="Florian Hyver, Tom Margalejo, Jean-Charles Luans, Tanguy Fenouillot">
     <title>Les Myosotis</title>
 
     <!-- Fichiers Css -->

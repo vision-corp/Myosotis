@@ -58,16 +58,29 @@
             </div>
             <br/>
 
-            <!-- Liste des articles -->
+            <!-- Liste des sections -->
             <table class="table">
                 <tbody>
-                <?php while ($row = $findContent->fetch()) { ?>
                 <tr>
-                    <td><?php echo $row['identifiant']; ?></td>
+                    <td>User 1</td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
                     <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                 </tr>
-                <?php } ?>
+                <tr>
+                    <td>User 2</td>
+                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
+                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
+                </tr>
+                <tr>
+                    <td>User 3</td>
+                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
+                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
+                </tr>
+                <tr>
+                    <td>User 4</td>
+                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
+                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
+                </tr>
                 </tbody>
             </table>
         </div>

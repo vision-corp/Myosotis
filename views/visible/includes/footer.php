@@ -6,8 +6,6 @@
     * Donne accès au copyright et également aux mentions légales.
 -->
 <footer class="container">
-    <p class="float-right"><a href="/views/visible/index.php">Retour en haut</a></p>
-
     <!-- Modal des mentions légales -->
     <?php require '_modal-MentionsLegales.php'; ?>
     <p>Les Myosotis · <a href="/views/visible/index.php" data-toggle="modal" data-target="#modal-mentionsl-legales">Mentions légales</a>
@@ -15,4 +13,5 @@
 </main>
 <script src="../js/jquery.js"></script>
 <script>window.jQuery || document.write('<script src="../js/jquery.js"><\/script>')</script><script src="../js/bootstrap.js"></script>
-</body></html>
+</body>
+</html>

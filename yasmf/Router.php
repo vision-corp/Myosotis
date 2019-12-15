@@ -28,7 +28,6 @@ class Router
             $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
             $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
         }elseif ($mode == "membre"){
-            // STUB, TODO gérer grades
             $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
             $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
         } else {

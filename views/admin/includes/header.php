@@ -9,24 +9,15 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
     <title>Les Myosotis - ADMR</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
 
     <!--CSS -->
     <link rel="stylesheet" href="/css/bootstrap.css">
-
     <link href="/css/calendrier.css" rel="stylesheet">
 
     <!-- Css perso -->
     <link href="/css/style.css" rel="stylesheet">
 
-    <!-- Fonctions facilitant le design du site -->
-    <!-- <?php //require 'functions/design-functions.php'; ?> -->
 </head>
 
 <body>

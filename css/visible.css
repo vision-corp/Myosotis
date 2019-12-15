@@ -1,6 +1,9 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
+/**
+ * visible.css
+ * author Info2 IUT Rodez 2019-2020
+ *
+ * Style de la partie visible du site
+ */
 
 body {
   padding-top: 3rem;
@@ -9,7 +12,7 @@ body {
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
+/* Crousel
 -------------------------------------------------- */
 
 /* Carousel base class */

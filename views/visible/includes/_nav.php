@@ -6,8 +6,8 @@
 -->
 
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-    <img src="../images/logo_admr.png" width="110" height="50" class="d-inline-block align-top" alt="">
-    <a class="navbar-brand mx-md-3" href="/views/visible/index.php">Les Myosotis</a>
+    <a href="https://www.admr.org/" target="_blank"><img src="../images/logo_admr.png" width="110" height="50" class="d-inline-block align-top" alt=""></a>
+    <a class="navbar-brand mx-md-3" href="/?controller=home">Les Myosotis</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
