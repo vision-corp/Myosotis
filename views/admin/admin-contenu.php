@@ -62,22 +62,22 @@
             <table class="table">
                 <tbody>
                 <tr>
-                    <td>User 1</td>
+                    <td>Section 1</td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
                     <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                 </tr>
                 <tr>
-                    <td>User 2</td>
+                    <td>Section 2</td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
                     <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                 </tr>
                 <tr>
-                    <td>User 3</td>
+                    <td>Section 3</td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
                     <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                 </tr>
                 <tr>
-                    <td>User 4</td>
+                    <td>Section 4</td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModificationSection">Modifier</a></td>
                     <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                 </tr>
