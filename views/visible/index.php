@@ -33,7 +33,7 @@ require 'includes/header.php';
             <img src="/images/exterieur.jpg">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1 class="tshadow">Un espace chalereur</h1>
+                    <h1 class="tshadow">Un espace chaleureux</h1>
                     <p class="tshadow">Les accueillis disposent de locaux récents et adaptés et d'un extérieur fleuri et aéré pour leur permettre de passer du bon temps, dans un confort plus qu'exceptionnel.</p>
                     <p><a class="btn btn-lg btn-success" href="/?controller=presentation" role="button">En savoir plus</a></p>
                 </div>
@@ -43,7 +43,7 @@ require 'includes/header.php';
             <img src="/images/animation.jpg">
             <div class="container">
                 <div class="carousel-caption text-right">
-                    <h1 class="tshadow">Des animations diversifiés</h1>
+                    <h1 class="tshadow">Des animations diversifiées</h1>
                     <p class="tshadow">De la musique en passant par la danse ou le théâtre, un tas d'activités de qualié sont proposées et animées par un personnel hautement qualifié.</p>
                     <p><a class="btn btn-lg btn-success" href="/?controller=presentation" role="button">En savoir plus</a></p>
                 </div>
