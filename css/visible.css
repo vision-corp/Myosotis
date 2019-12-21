@@ -119,3 +119,7 @@ titreSlide {
   text-shadow: black 0.1em 0.1em 0.2em;
   color: #fbfffd !important;
 }
+
+.img-article {
+  width: 100% !important;
+}

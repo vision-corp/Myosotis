@@ -21,6 +21,9 @@
                 >Présentation</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/?controller=actualite">Actualité</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/?controller=contact">Contact</a>
             </li>
         </ul>
