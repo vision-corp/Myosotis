@@ -14,6 +14,7 @@ class ActualiteController
 {
     public function index($pdo) {
         $view = new View("/views/visible/actualite");
+        $view->setVar('page', 'actualite');
         return $view;
     }
 }

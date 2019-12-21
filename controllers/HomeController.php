@@ -16,6 +16,7 @@ class HomeController implements Controller
 {
     public function index($pdo) {
         $view = new View("/views/visible/index");
+        $view->setVar('page', 'accueil');
         return $view;
     }
 }

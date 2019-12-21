@@ -14,6 +14,7 @@ class ArticleController
 {
     public function index($pdo) {
         $view = new View("/views/visible/article");
+        $view->setVar('page', 'article');
         return $view;
     }
 }

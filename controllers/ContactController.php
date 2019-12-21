@@ -14,6 +14,7 @@ class ContactController
 {
     public function index($pdo) {
         $view = new View("/views/visible/contact");
+        $view->setVar('page', 'contact');
         return $view;
     }
 }

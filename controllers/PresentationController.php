@@ -15,6 +15,7 @@ class PresentationController
 {
     public function index($pdo) {
         $view = new View("/views/visible/presentation");
+        $view->setVar('page', 'presentation');
         return $view;
     }
 }

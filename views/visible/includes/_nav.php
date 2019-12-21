@@ -4,6 +4,23 @@
     *
     * Barre de navigation responsive de la partie visible du site
 -->
+<?php
+
+/**
+ * Permet d'afficher ou pas la variable selected suivant la page sur laquelle on se trouve.
+ * @param $onglet nom de la page à tester
+ * @param $page nom de la page actuelle (envoyé par le controller)
+ */
+function select($onglet, $page) {
+    $selected = ' active';
+
+    if (isset($page) && $page === $onglet) {
+        echo $selected;
+    } elseif(!isset($page) && $onglet === 'accueil') {
+        echo $selected;
+    }
+}
+?>
 
 <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
     <a href="https://www.admr.org/" target="_blank"><img src="../images/logo_admr.png" width="110" height="50" class="d-inline-block align-top" alt=""></a>
@@ -13,17 +30,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item <?php select('accueil', $page); ?>">
                 <a class="nav-link" href="/?controller=home">Accueil </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php select('presentation', $page); ?>">
                 <a class="nav-link" href="/?controller=presentation"
                 >Présentation</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php select('actualite', $page); select('article', $page); ?>">
                 <a class="nav-link" href="/?controller=actualite">Actualité</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item <?php select('contact', $page); ?>">
                 <a class="nav-link" href="/?controller=contact">Contact</a>
             </li>
         </ul>
