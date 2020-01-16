@@ -11,46 +11,30 @@
 require 'includes/header.php';
 ?>
 
+<?php
+    if (isset($article)) {
+?>
 <div class="container">
     <br/>
     <div class="row">
         <div class="col-md-12">
-            <h1>Article 1</h1>
+            <h1> <?php echo $article['titre'] ?></h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-            <p><i>12 janvier 2019 à 18h24 par Admin</i></p>
+            <p><i> <?php echo $article['datePublication'] ?></i></p>
 
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-5">
+            <!-- TODO remplacer image -->
             <img src="/images/photoCorps1.JPG" class="img-article">
         </div>
         <div class="col-md-7">
-            <p class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-
-            </p>
-        </div>
-        <div class="col-md-12">
-            <p class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis cumque dolorem doloremque dolorum eaque et eveniet odio, odit quo quod repellat tempora voluptatem. Assumenda ea minima non reprehenderit repudiandae voluptate.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae consequatur earum fugiat iste, magni maiores molestias officia possimus, qui tempora ut vel voluptas? Eaque et excepturi nam odio recusandae?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores autem consequatur deserunt, dicta eaque eum fugiat ipsam magnam modi molestiae omnis quae quas quibusdam quo similique tempora voluptatibus. Fugiat, tempore.
-            </p>
+            <?php echo $article['contenu'] ?>
         </div>
     </div>
 
@@ -58,6 +42,6 @@ require 'includes/header.php';
     <br/>
 </div>
 
-
+<?php  } ?>
 <!-- Inclusion du footer -->
 <?php require 'includes/footer.php';?>

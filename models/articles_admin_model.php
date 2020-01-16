@@ -7,9 +7,9 @@ class articles_admin_model {
     /** 
      * Créer un nouvel article en base de donnée
      */
-    public static function creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor) {
-        $stmt = $pdo->prepare("INSERT INTO articles (titre,contenu,image,sousTitre) VALUES (?, ?, ?, ?)");
-        $stmt->execute([$titre, $txtEditor, $image, $sousTitre]);
+    public static function creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date) {
+        $stmt = $pdo->prepare("INSERT INTO articles (titre,contenu,image,sousTitre, datePublication) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$titre, $txtEditor, $image, $sousTitre, $date]);
     }
 
     /**
@@ -23,5 +23,10 @@ class articles_admin_model {
             $tab[] = array('id'=>$row['id'], 'titre'=>$row['titre']);
         }
         return $tab;
+    }
+
+    public static function supprimerArticle($pdo, $id) {
+        $stmt = $pdo->prepare("DELETE FROM articles WHERE id = ?");
+        $stmt->execute([$id]);
     }
 }

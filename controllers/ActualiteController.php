@@ -6,7 +6,7 @@
  */
 namespace controllers;
 
-use models\articles_visible_model;
+use models\actualite_visible_model;
 use yasmf\HttpHelper;
 use yasmf\View;
 
@@ -16,7 +16,7 @@ class ActualiteController
     public function index($pdo) {
         $view = new View("/views/visible/actualite");
         $view->setVar('page', 'actualite');
-        $articles = articles_visible_model::lireArticle($pdo);
+        $articles = actualite_visible_model::lireArticle($pdo);
         $view->setVar('articles', $articles);
         return $view;
     }

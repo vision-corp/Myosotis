@@ -24,7 +24,7 @@ require 'includes/header.php';
                     <div class="card-body">
                         <h5 class="card-title"><?php echo  $row['titre']?></h5>
                         <p class="card-text"><?php echo $row['sousTitre'] ?></p>
-                        <a href="/?controller=article&id=<?php echo $row['id'] ?>" class="btn btn-success">En savoir plus</a>
+                        <a href="/?controller=ArticleVisible&id=<?php echo $row['id'] ?>" class="btn btn-success">En savoir plus</a>
                     </div>
                 </div>
             </div>

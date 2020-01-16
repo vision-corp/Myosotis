@@ -4,16 +4,13 @@
 
     class articles_visible_model {
 
-        /**
-         * @param $pdo : base de connecter a laquelle on se connecte
-         * @return mixed : un tableau de colonne de la BD
-         */
-        public static function lireArticle($pdo) {
-            $stmt = $pdo->query("SELECT * FROM articles");
-            $tab = array();
-            while ($row = $stmt->fetch()) {
-                $tab[] = array('id'=>$row['id'], 'titre'=>$row['titre'], 'contenu'=>$row['contenu'], 'image'=>$row['image'], 'sousTitre'=>$row['sousTitre']);
-            }
+        public static function lireArticle($pdo, $id) {
+
+            $stmt = $pdo->prepare("Select * From articles Where id = ?");
+            $stmt->execute([$id]);
+
+            $tab = $stmt->fetch();
+
             return $tab;
         }
 

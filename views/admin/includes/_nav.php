@@ -8,7 +8,7 @@
     // Configuration des liens menant à chaque page de la partie admin
     $dashboard = "/?controller=admin&mode=admin";
     $planning = "/?controller=planning&mode=admin";
-    $articles = "/?controller=articles&mode=admin";
+    $articles = "/?controller=articlesAdmin&mode=admin";
     $contenu = "/?controller=contenu&mode=admin";
     $utilisateurs = "/?controller=utilisateurs&mode=admin";
     $profil = "/?controller=profil&mode=admin";

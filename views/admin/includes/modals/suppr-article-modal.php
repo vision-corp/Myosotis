@@ -13,8 +13,16 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-        <button type="button" class="btn btn-danger">Supprimer</button>
+        <a href="#" class="btn btn-danger" id="suppr">Supprimer</a>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+    $('#supprArticleModal').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget)
+        var id = button.data('id')
+        document.getElementById('suppr').href='?controller=ArticlesAdmin&mode=admin&action=supprimerArticle&id=' + id
+    })
+</script>

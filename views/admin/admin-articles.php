@@ -41,7 +41,7 @@ require 'includes/modals/suppr-article-modal.php';
                     <?php // TODO recuperer les ID pour la suppression et la modification des articles ?>
                     <td> <?php echo $ligne['titre'] ?> </td>
                     <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
+                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal" data-id="<?php echo $ligne['id'] ?>">Supprimer</a></td>
                 </tr>
         <?php } }?>
 

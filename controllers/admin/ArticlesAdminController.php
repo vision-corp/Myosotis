@@ -33,13 +33,18 @@ class ArticlesAdminController implements Controller
      */
     public function ajoutArticle($pdo)
     {
+
+        date_default_timezone_set("Europe");
+
         $titre = HttpHelper::getParam('titre');
         $sousTitre = HttpHelper::getParam('sousTitre');
         $image = HttpHelper::getParam('image');
         $txtEditor = HttpHelper::getParam('txtEditor');
+        $date = "Le " . date("d-m-Y", "Europe/Paris") . " à " . date("H:i","Europe/Paris");
+
 
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
-            articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor);
+            articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date);
             $reussite = true;
         } else {
             $reussite = false;
@@ -47,8 +52,10 @@ class ArticlesAdminController implements Controller
         return $this->index($pdo)->setVar('reussite', $reussite);
     }
 
-    public function modifierArticle($pdo, $id) {
-        // STUB
+    public function supprimerArticle($pdo) {
+        $id = HttpHelper::getParam('id');
+        articles_admin_model::supprimerArticle($pdo,$id);
+        return $this->index($pdo);
     }
 
 }
