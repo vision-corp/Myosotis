@@ -20,6 +20,8 @@ require 'includes/modals/suppr-article-modal.php';
 
         <!-- Titre de la page -->
         <h1 class="h2">Gestion des articles</h1>
+        <?php if (isset($reussite) && $reussite === true) { echo '<script> alert("Article enregistré") </script>'; } ?>
+        <?php if (isset($reussite) && $reussite === false) { echo '<script> alert("Article non enregistré") </script>'; } ?>
 
         <!-- Boutons d'actions sur la page -->
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -32,31 +34,17 @@ require 'includes/modals/suppr-article-modal.php';
     <!-- Liste des articles -->
     <table class="table">
         <tbody>
-        <tr>
-            <td>Article 1</td>
-            <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>Article 2</td>
-            <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>Article 3</td>
-            <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>Article 4</td>
-            <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>Article 5</td>
-            <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
-        </tr>
+
+        <?php if (isset($liste)) {
+            foreach ($liste as $ligne) { ?>
+                <tr>
+                    <?php // TODO recuperer les ID pour la suppression et la modification des articles ?>
+                    <td> <?php echo $ligne['titre'] ?> </td>
+                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
+                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal">Supprimer</a></td>
+                </tr>
+        <?php } }?>
+
         </tbody>
     </table>
 </main>

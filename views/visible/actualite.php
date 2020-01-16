@@ -15,22 +15,21 @@ require 'includes/header.php';
     <br/>
     <h1>Actualité</h1>
     <div class="row">
-        <?php
-        for ($i = 0; $i < 8; $i++) {
 
-            ?>
+        <?php if (isset($articles)) {
+        foreach ($articles as $row) { ?>
             <div class="col-md-4 col-sm-3 col-xs-2">
                 <div class="card mb-5" style="width: 18rem;">
                     <img src="/images/vignette.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Article <?php echo $i + 1 ?></h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="/?controller=article" class="btn btn-success">En savoir plus</a>
+                        <h5 class="card-title"><?php echo  $row['titre']?></h5>
+                        <p class="card-text"><?php echo $row['sousTitre'] ?></p>
+                        <a href="/?controller=article&id=<?php echo $row['id'] ?>" class="btn btn-success">En savoir plus</a>
                     </div>
                 </div>
             </div>
             <?php
-        }
+        } }
         ?>
     </div>
 </div>

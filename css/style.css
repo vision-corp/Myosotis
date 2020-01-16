@@ -8,3 +8,11 @@
 .cellModifier {
   width: 15px;
 }
+
+.succes {
+  color: green;
+}
+
+.echec {
+  color: red;
+}

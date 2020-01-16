@@ -5,7 +5,7 @@ use yasmf\DataSource;
 use yasmf\Router;
 $dataSource = new DataSource(
     $host = 'localhost',
-    $port = '8889',
+    $port = '3306',
     $db = 'myosotis',
     $user = 'root',
     $pass = 'root',
