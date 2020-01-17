@@ -17,10 +17,10 @@ class articles_admin_model {
      * @return mixed : un tableau de colonne de la BD
      */
     public static function lireArticle($pdo) {
-        $stmt = $pdo->query("SELECT id, titre FROM articles");
+        $stmt = $pdo->query("SELECT * FROM articles");
         $tab = array();
         while($row = $stmt->fetch()) {
-            $tab[] = array('id'=>$row['id'], 'titre'=>$row['titre']);
+            $tab[] = array('id'=>$row['id'], 'titre'=>$row['titre'], 'sousTitre'=>$row['sousTitre'], 'image'=>$row['image'], 'contenu'=>$row['contenu'], 'datePublication'=>$row['datePublication']);
         }
         return $tab;
     }
@@ -28,5 +28,11 @@ class articles_admin_model {
     public static function supprimerArticle($pdo, $id) {
         $stmt = $pdo->prepare("DELETE FROM articles WHERE id = ?");
         $stmt->execute([$id]);
+    }
+
+    public static function modifierArticle($pdo, $id, $titre, $sousTitre, $image, $txtEditor, $date) {
+        $stmt = $pdo->prepare("UPDATE articles SET titre = ?, contenu = ?, image = ?, sousTitre = ?, datePublication = ? WHERE id = ?");
+        $stmt->execute([$titre, $txtEditor, $image, $sousTitre, $date, $id]);
+
     }
 }

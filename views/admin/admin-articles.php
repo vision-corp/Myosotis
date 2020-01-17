@@ -38,10 +38,9 @@ require 'includes/modals/suppr-article-modal.php';
         <?php if (isset($liste)) {
             foreach ($liste as $ligne) { ?>
                 <tr>
-                    <?php // TODO recuperer les ID pour la suppression et la modification des articles ?>
                     <td> <?php echo $ligne['titre'] ?> </td>
-                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle">Modifier</a></td>
-                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal" data-id="<?php echo $ligne['id'] ?>">Supprimer</a></td>
+                    <td class="cellModifier"><a href="#"data-toggle="modal" data-target="#modalModifArticle" data-id="<?php echo $ligne['id']; ?>">Modifier</a></td>
+                    <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprArticleModal" data-id="<?php echo $ligne['id'] ?>" data-titre="<?php echo $ligne['titre'] ?>" data-sousTitre="<?php echo $ligne['sousTitre'] ?>" data-image="<?php echo $ligne['image'] ?>" data-contenu="<?php echo $ligne['contenu'] ?>" data-datePublication="<?php echo $ligne['datePublication'] ?>">Supprimer</a></td>
                 </tr>
         <?php } }?>
 

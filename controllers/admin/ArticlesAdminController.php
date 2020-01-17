@@ -34,13 +34,13 @@ class ArticlesAdminController implements Controller
     public function ajoutArticle($pdo)
     {
 
-        date_default_timezone_set("Europe");
+        date_default_timezone_set('Europe/Paris');
 
         $titre = HttpHelper::getParam('titre');
         $sousTitre = HttpHelper::getParam('sousTitre');
         $image = HttpHelper::getParam('image');
         $txtEditor = HttpHelper::getParam('txtEditor');
-        $date = "Le " . date("d-m-Y", "Europe/Paris") . " à " . date("H:i","Europe/Paris");
+        $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
 
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
@@ -54,8 +54,30 @@ class ArticlesAdminController implements Controller
 
     public function supprimerArticle($pdo) {
         $id = HttpHelper::getParam('id');
-        articles_admin_model::supprimerArticle($pdo,$id);
+        articles_admin_model::supprimerArticle($pdo, $id);
         return $this->index($pdo);
+    }
+
+    public function modifierArticle($pdo) {
+
+        date_default_timezone_set('Europe/Paris');
+
+        $id = HttpHelper::getParam('id');
+
+        $titre = HttpHelper::getParam('titre');
+        $sousTitre = HttpHelper::getParam('sousTitre');
+        $image = HttpHelper::getParam('image');
+        $txtEditor = HttpHelper::getParam('txtEditor');
+        $date = "Le " . date("d-m-Y") . " à " . date("H:i");
+
+
+        if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
+            articles_admin_model::modifierArticle($pdo, $id, $titre, $sousTitre, $image, $txtEditor, $date);
+            $reussite = true;
+        } else {
+            $reussite = false;
+        }
+        return $this->index($pdo)->setVar('reussite', $reussite);
     }
 
 }
