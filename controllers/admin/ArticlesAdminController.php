@@ -42,14 +42,21 @@ class ArticlesAdminController implements Controller
         $txtEditor = HttpHelper::getParam('txtEditor');
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
+        $manquant = array();
 
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
             articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date);
             $reussite = true;
         } else {
+            $manquant = self::champsManquant($titre, $sousTitre, $image, $txtEditor);
             $reussite = false;
         }
-        return $this->index($pdo)->setVar('reussite', $reussite);
+
+        $view = $this->index($pdo);
+        $view->setVar('reussite', $reussite);
+        $view->setVar('manquant', $manquant);
+
+        return $view;
     }
 
     public function supprimerArticle($pdo) {
@@ -70,14 +77,42 @@ class ArticlesAdminController implements Controller
         $txtEditor = HttpHelper::getParam('txtEditor');
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
+        $manquant = array();
 
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
             articles_admin_model::modifierArticle($pdo, $id, $titre, $sousTitre, $image, $txtEditor, $date);
             $reussite = true;
         } else {
+            $manquant = self::champsManquant($titre, $sousTitre, $image, $txtEditor);
             $reussite = false;
         }
-        return $this->index($pdo)->setVar('reussite', $reussite);
+        $view = $this->index($pdo);
+        $view->setVar('reussite', $reussite);
+        $view->setVar('manquant', $manquant);
+        return $view;
+    }
+
+    public static function champsManquant($titre, $sousTitre, $image, $txtEditor) {
+
+        $manquant = array('titre'=>'', 'sousTitre'=>'', 'image'=>'', 'txtEditor'=>'');
+
+        if ($titre == null) {
+            $manquant['titre'] = '- le champs titre\n';
+        }
+
+        if ($sousTitre == null) {
+            $manquant['sousTitre'] = '- le champs sous-titre\n';
+        }
+
+        if ($image == null) {
+            $manquant['image'] = '- le champs image\n';
+        }
+
+        if ($txtEditor == null) {
+            $manquant['txtEditor'] = '- le champs contenu\n';
+        }
+
+        return $manquant;
     }
 
 }

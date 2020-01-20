@@ -21,7 +21,12 @@ require 'includes/modals/suppr-article-modal.php';
         <!-- Titre de la page -->
         <h1 class="h2">Gestion des articles</h1>
         <?php if (isset($reussite) && $reussite === true) { echo '<script> alert("Article enregistré") </script>'; } ?>
-        <?php if (isset($reussite) && $reussite === false) { echo '<script> alert("Article non enregistré") </script>'; } ?>
+
+        <?php if (isset($reussite) && isset($manquant) && $reussite === false) { echo '<script> alert("Article non enregistré, veuillez remplir :\n'
+            .$manquant['titre']
+            .$manquant['sousTitre']
+            .$manquant['image']
+            .$manquant['txtEditor'].'") </script>'; } ?>
 
         <!-- Boutons d'actions sur la page -->
         <div class="btn-toolbar mb-2 mb-md-0">
