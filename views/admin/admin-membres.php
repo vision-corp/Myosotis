@@ -33,39 +33,31 @@ require 'includes/modals/modifiaction-membre.php';
     <!-- Liste des utilisateurs -->
     <table class="table">
         <tbody>
+          <?php
+            foreach ($users as $user)
+            {
+           ?>
         <tr>
-            <td>User 1</td>
-            <td class="cellModifier"><a href="" data-toggle="modal" data-target="#modalModificationMembre">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
+            <td><?php echo $user[2] ?></td>
+            <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationMembre" data-id="<?php echo $user[5]; ?>" data-prenom="<?php echo $user[0]; ?>" data-nom="<?php echo $user[1]; ?>" data-pseudo="<?php echo $user[2]; ?>" data-email="<?php echo $user[3]; ?>" >Modifier</a></td>
+            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal" data-id="<?php echo $user[5]; ?>">Supprimer</a></td>
         </tr>
-        <tr>
-            <td>User 2</td>
-            <td class="cellModifier"><a href="" data-toggle="modal" data-target="#modalModificationMembre">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>User 3</td>
-            <td class="cellModifier"><a href="" data-toggle="modal" data-target="#modalModificationMembre">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>User 4</td>
-            <td class="cellModifier"><a href="" data-toggle="modal" data-target="#modalModificationMembre">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>User 5</td>
-            <td class="cellModifier"><a href="" data-toggle="modal" data-target="#modalModificationMembre">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
-        </tr>
-        <tr>
-            <td>User 6</td>
-            <td class="cellModifier"><a href="" data-toggle="modal" data-target="#modalModificationMembre">Modifier</a></td>
-            <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#suppreMembreModal">Supprimer</a></td>
-        </tr>
+        <?php
+          }
+         ?>
         </tbody>
     </table>
 </main>
+
+<?php
+  if ($modal == "ajoutUser") {
+    echo "<script>$('#modalAjoutUtilisateur').modal('show')</script>";
+  }
+  if ($modal == "modifyUser") {
+    //echo "<script>$('#modalModificationMembre').modal('show')</script>";
+  }
+?>
+
 
 <!-- footer -->
 <?php require 'includes/footer.php'; ?>

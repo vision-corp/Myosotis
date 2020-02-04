@@ -23,24 +23,28 @@ class Router
 {
     public function route($dataSource)
     {
-        // set the controller to enrole
-        if ($mode = HttpHelper::getParam('mode') == "admin") {
-            $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
-            $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
-        }elseif ($mode == "membre"){
-            $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
-            $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
-        } else {
-            $controllerName = HttpHelper::getParam('controller') ?: 'Home';
-            $controllerQualifiedName = "controllers\\" . $controllerName . "Controller";
-        }
+//        try {
+            // set the controller to enrole
+            if ($mode = HttpHelper::getParam('mode') == "admin") {
+                $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
+                $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
+            }elseif ($mode == "membre"){
+                $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
+                $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
+            } else {
+                $controllerName = HttpHelper::getParam('controller') ?: 'Home';
+                $controllerQualifiedName = "controllers\\" . $controllerName . "Controller";
+            }
 
-        $controller = new $controllerQualifiedName();
-        // set the action to trigger
-        $action = HttpHelper::getParam('action') ?: 'index';
-        // trigger the appropriate action and get the resulted view
-        $view = $controller->$action($dataSource->getPdo());
-        // render the view
-        $view->render();
+            $controller = new $controllerQualifiedName();
+            // set the action to trigger
+            $action = HttpHelper::getParam('action') ?: 'index';
+            // trigger the appropriate action and get the resulted view
+            $view = $controller->$action($dataSource->getPdo());
+            // render the view
+            $view->render();
+//        } catch (\Error $e) {
+//            header("Location: erreur/index.html");
+//        }
     }
 }

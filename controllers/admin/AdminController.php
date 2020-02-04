@@ -6,6 +6,7 @@
  */
 namespace controllers\admin;
 
+use yasmf\ConnectHelpers;
 use yasmf\HttpHelper;
 use yasmf\View;
 
@@ -14,6 +15,7 @@ class AdminController
 {
     public function index()
     {
+        ConnectHelpers::secure();
         $view = new View("/views/admin/admin");
         return $view;
     }

@@ -40,7 +40,7 @@
     </div>
 
     <!-- Calendrier -->
-    <?php require 'includes/calendrier.php' ?>
+      <div id='calendar'></div>
 
 </main>
 

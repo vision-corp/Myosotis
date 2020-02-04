@@ -1,6 +1,6 @@
 <?php
 /**
- * ContenuController.php
+ * ParametresController.php
  * author Info2 IUT Rodez 2019-2020
  *
  */
@@ -12,12 +12,12 @@ use yasmf\HttpHelper;
 use yasmf\View;
 
 
-class ContenuController
+class ParametresController
 {
     public function index($pdo)
     {
         ConnectHelpers::secureAdmin();
-        $view = new View("/views/admin/admin-contenu");
+        $view = new View("/views/admin/admin-parametres");
         return $view;
     }
 }

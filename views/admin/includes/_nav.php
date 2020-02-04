@@ -8,11 +8,12 @@
     // Configuration des liens menant à chaque page de la partie admin
     $dashboard = "/?controller=admin&mode=admin";
     $planning = "/?controller=planning&mode=admin";
-    $articles = "/?controller=articles&mode=admin";
+    $articles = "/?controller=articlesAdmin&mode=admin";
     $contenu = "/?controller=contenu&mode=admin";
     $utilisateurs = "/?controller=utilisateurs&mode=admin";
     $profil = "/?controller=profil&mode=admin";
-    $deconnexion = "/?controller=connexion&mode=admin";
+    $deconnexion = "/?controller=Logout&mode=admin";
+    $parametres = "/?controller=parametres&mode=admin";
 
 ?>
 
@@ -29,18 +30,35 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo $dashboard; ?>">Tableau de bord </a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $planning; ?>">Planning</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $articles; ?>">Articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $contenu; ?>">Contenu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $utilisateurs; ?>">Utilisateurs</a>
-                    </li>
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $articles; ?>">Articles</a>
+                        </li>
+                    <?php }?>
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $contenu; ?>">Contenu</a>
+                        </li>
+                    <?php }?>
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $utilisateurs; ?>">Utilisateurs</a>
+                        </li>
+                    <?php }?>
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $parametres; ?>">Paramètres</a>
+                        </li>
+                    <?php }?>
+
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $profil; ?>">Mon profil</a>
                     </li>
@@ -59,36 +77,57 @@
         <nav class="col-md-2 d-none d-md-block bg-light bd-sidebar">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo $dashboard; ?>">
-                            <span data-feather="home"></span>
-                            Tableau de bord <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="<?php echo $dashboard; ?>">
+                                <span data-feather="home"></span>
+                                Tableau de bord <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $planning; ?>">
                             <span data-feather="file"></span>
                             Planning
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $articles; ?>">
-                            <span data-feather="shopping-cart"></span>
-                            Articles
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $contenu; ?>">
-                            <span data-feather="users"></span>
-                            Contenu
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $utilisateurs; ?>">
-                            <span data-feather="bar-chart-2"></span>
-                            Utilisateurs
-                        </a>
-                    </li>
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $articles; ?>">
+                                <span data-feather="shopping-cart"></span>
+                                Articles
+                            </a>
+                        </li>
+                    <?php }?>
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $contenu; ?>">
+                                <span data-feather="users"></span>
+                                Contenu
+                            </a>
+                        </li>
+                    <?php }?>
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $utilisateurs; ?>">
+                                <span data-feather="bar-chart-2"></span>
+                                Utilisateurs
+                            </a>
+                        </li>
+                    <?php }?>
+
+
+                    <?php if($_SESSION['user_admin'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo $parametres; ?>">
+                                <span data-feather="bar-chart-2"></span>
+                                Paramètres
+                            </a>
+                        </li>
+                    <?php }?>
+
                 </ul>
 
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
