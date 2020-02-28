@@ -23,8 +23,8 @@ require 'includes/header.php';
             <img src="/images/batiment.jpg">
             <div class="container">
                 <div class="carousel-caption text-left">
-                    <h1 class="titreSlide tshadow">Bienvenue sur le site de l'associaiton Les Myosotis</h1>
-                    <p class="tshadow">Cette association accueillle des personnes dépendantes quelques jours par semaine. Cela leur permet de sortir et entretenir une vie sociale malgrès les coups dur de la vie.</p>
+                    <h1 class="titreSlide tshadow"><?php echo $param['s1_titre'] ?></h1>
+                    <p class="tshadow"><?php echo $param['s1_sousTitre'] ?></p>
                     <p><a class="btn btn-lg btn-success" href="/?controller=presentation" role="button">En savoir plus</a></p>
                 </div>
             </div>
@@ -33,8 +33,8 @@ require 'includes/header.php';
             <img src="/images/exterieur.jpg">
             <div class="container">
                 <div class="carousel-caption">
-                    <h1 class="tshadow">Un espace chaleureux</h1>
-                    <p class="tshadow">Les accueillis disposent de locaux récents et adaptés et d'un extérieur fleuri et aéré pour leur permettre de passer du bon temps, dans un confort plus qu'exceptionnel.</p>
+                    <h1 class="tshadow"><?php echo $param['s2_titre'] ?></h1>
+                    <p class="tshadow"><?php echo $param['s2_sousTitre'] ?></p>
                     <p><a class="btn btn-lg btn-success" href="/?controller=presentation" role="button">En savoir plus</a></p>
                 </div>
             </div>
@@ -43,8 +43,8 @@ require 'includes/header.php';
             <img src="/images/animation.jpg">
             <div class="container">
                 <div class="carousel-caption text-right">
-                    <h1 class="tshadow">Des animations diversifiées</h1>
-                    <p class="tshadow">De la musique en passant par la danse ou le théâtre, un tas d'activités de qualié sont proposées et animées par un personnel hautement qualifié.</p>
+                    <h1 class="tshadow"><?php echo $param['s3_titre'] ?></h1>
+                    <p class="tshadow"><?php echo $param['s2_sousTitre'] ?></p>
                     <p><a class="btn btn-lg btn-success" href="/?controller=presentation" role="button">En savoir plus</a></p>
                 </div>
             </div>

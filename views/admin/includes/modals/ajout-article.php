@@ -21,8 +21,11 @@
 
                     <div class="form-group">
                         <label for="image">Insérer une image</label>
-                        <input type="file" class="form-control-file" id="image" name="image">
+                        <input name="fichier" type="file" id="fichier_a_uploader" class="form-control-file"/>
+
                     </div>
+
+                    <input type="hidden" name="MAX_FILE_SIZE" value="40000000" />
 
                     <div class="form-group">
                         <label for="message-text" class="col-form-label">Contenu:</label>
@@ -50,9 +53,9 @@
         var modifTitre = document.getElementById("titre")
         var modifSousTitre = document.getElementById("sousTitre")
         var modifImage = document.getElementById("image")
-        var modifTxtEditor = document.getElementById("txtEditor")
-
-        if ((!modifTxtEditor.value) || (modifTxtEditor.value.length <= 2)) {
+        //var modifTxtEditor = document.getElementById("txtEditor")
+        var modifTxtEditor = tinymce.activeEditor.getContent()
+        if ((!modifTxtEditor) || (modifTxtEditor.length <= 2)) {
             erreur = "Veuillez ajouter du contenu à l'article."
         }
 

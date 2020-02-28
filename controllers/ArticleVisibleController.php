@@ -8,6 +8,7 @@ namespace controllers;
 
 use model\actualite_visible_model;
 use model\articles_visible_model;
+use model\global_model;
 use yasmf\HttpHelper;
 use yasmf\View;
 
@@ -22,8 +23,8 @@ class ArticleVisibleController
         $id = HttpHelper::getParam('id');
 
         $view = new View("/views/visible/article");
+        $view->setVar("mentions", global_model::getMentionsLegales($pdo));
         $view->setVar('page', 'article');
-
         $article = articles_visible_model::lireArticle($pdo,$id);
         $view->setVar('article', $article);
         return $view;

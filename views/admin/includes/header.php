@@ -1,17 +1,10 @@
-<!--*
-    * header.php
-    * author Info2 IUT Rodez 2019-2020
-    *
-    * Header de la partie admin
--->
-
+<!DOCTYPE html>
 <?php
-    if (session_status() == PHP_SESSION_NONE) {
-        session_start();
-    }
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 
-<!doctype html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">

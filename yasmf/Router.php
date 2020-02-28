@@ -44,7 +44,7 @@ class Router
             // render the view
             $view->render();
 //        } catch (\Error $e) {
-//            header("Location: erreur/index.html");
+//            header("Location: index.php");
 //        }
     }
 }

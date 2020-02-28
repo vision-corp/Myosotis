@@ -63,6 +63,7 @@
         document.getElementById('imageactuelle').innerText = image;
         document.getElementById('idModif').value = id;
         tinymce.activeEditor.setContent(txtEditor);
+        console.log(image)
     })
     document.getElementById("formModif").addEventListener("submit", function (e) {
 
@@ -70,9 +71,10 @@
         var modifTitreModif = document.getElementById("titreModif")
         var modifSousTitreModif = document.getElementById("sousTitreModif")
         var modifImageModif = document.getElementById("imageModif")
-        var modifTxtEditorModif = document.getElementById("txtEditorModif")
-
-        if ((!modifTxtEditorModif.value) || (modifTxtEditorModif.value.length <= 2)) {
+        //var modifTxtEditorModif = document.getElementById("txtEditorModif")
+        var modifTxtEditorModif = tinymce.activeEditor.getContent()
+        console.log(modifTxtEditorModif)
+        if ((!modifTxtEditorModif) || (modifTxtEditorModif.length <= 2)) {
             erreur = "Veuillez ajouter du contenu à l'article."
         }
 

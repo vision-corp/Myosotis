@@ -12,6 +12,7 @@ use yasmf\HttpHelper;
 use yasmf\View;
 use yasmf\Controller;
 use model\articles_admin_model;
+use yasmf\ImgHelpers;
 
 /**
  * Class ArticlesAdminController de la partie ADMIN
@@ -46,7 +47,8 @@ class ArticlesAdminController implements Controller
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
-            articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date);
+            $newImg = ImgHelpers::upload_img();
+            articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $newImg, $txtEditor, $date);
             $reussite = true;
         } else {
             $_SESSION['erreursArticles'] = "L'article n'a pas pu être enregistré";
@@ -77,12 +79,14 @@ class ArticlesAdminController implements Controller
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
 
-        if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
+        if ($titre != null && $sousTitre != null && $txtEditor != null) {
             articles_admin_model::modifierArticle($pdo, $id, $titre, $sousTitre, $image, $txtEditor, $date);
         }
         return $this->index($pdo);
 
     }
+
+
 
 }
 

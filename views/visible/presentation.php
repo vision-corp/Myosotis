@@ -10,6 +10,7 @@
 <!-- Inclusion de l'entête -->
 <?php
 require 'includes/header.php';
+
 ?>
 
 <div class="container">
@@ -67,20 +68,31 @@ require 'includes/header.php';
     <h3>Téléchargements</h3>
 
     <div class="row">
-        <div class="col-md-6">
-            <ul>
-                <li><a href="#">Plaquette de présentation</a></li>
-                <li><a href="#">Livret d'accueil 1</a></li>
-                <li><a href="#">Livret d'accueil 2</a></li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <ul>
-                <li><a href="#">Règlement de fonctionnement</a></li>
-                <li><a href="#">Documents d'admission</a></li>
-                <li><a href="#">Contrat d'accueil</a></li>
-            </ul>
-        </div>
+
+
+        <?php
+        for($i = 0; $i < sizeof($telechargements); $i++) {
+            if ($i % 2 == 0) {
+                ?>
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="<?php echo $telechargements[$i][1]; ?>" target="_blank"><?php echo $telechargements[$i][0]; ?></a></li>
+                    </ul>
+                </div>
+
+                <?php
+            } else {
+                ?>
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="<?php echo $telechargements[$i][1]; ?>" target="_blank"><?php echo $telechargements[$i][0]; ?></a></li>
+                    </ul>
+                </div>
+                <?php
+            }
+        }
+        ?>
+
     </div>
 
     <hr class="featurette-divider">
