@@ -10,21 +10,18 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="sousTitre" class="col-form-label">Identifiant :</label>
-                        <input type="text" class="form-control" id="sousTitre">
-                    </div>
-                    <div class="form-group">
                         <label for="titre" class="col-form-label">Titre :</label>
-                        <input type="text" class="form-control" id="titre">
+                        <input type="text" class="form-control" id="titreModif">
                     </div>
                     <div class="form-group">
                         <label for="sousTitre" class="col-form-label">Sous-titre :</label>
-                        <input type="text" class="form-control" id="sousTitre">
+                        <input type="text" class="form-control" id="sousTitreModif">
                     </div>
 
                     <div class="form-group">
                         <label for="image">Insérer une image</label>
-                        <input type="file" class="form-control-file" id="image">
+                        <input type="file" class="form-control-file" id="imageModif">
+                        <p id="imageActuelle">Image actuelle : Aucune</p>
                     </div>
 
                     <div class="form-group">

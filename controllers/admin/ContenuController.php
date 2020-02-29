@@ -10,6 +10,7 @@ namespace controllers\admin;
 use yasmf\ConnectHelpers;
 use yasmf\HttpHelper;
 use yasmf\View;
+use model\section_model;
 
 
 class ContenuController
@@ -18,6 +19,8 @@ class ContenuController
     {
         ConnectHelpers::secureAdmin();
         $view = new View("/views/admin/admin-contenu");
+        $view->setVar("accueil", section_model::getSection($pdo, "accueil"));
+        $view->setVar("presentation", section_model::getSection($pdo, "presentation"));
         return $view;
     }
 }
