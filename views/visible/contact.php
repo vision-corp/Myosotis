@@ -51,6 +51,18 @@ require 'includes/_modal-conditions-formulaire.php'
 
         <!-- Carte google map -->
         <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class=""><?php echo $param['adresse']; ?><br/><?php echo $param['cp']; ?>, <?php echo $param['ville']; ?><br/><?php echo $param['pays']; ?></p>
+
+                </div>
+                <div class="col-md-6">
+                    <p class="">Telephone: <?php echo $param['telephone']; ?></p>
+                    <p class="">Mail: <?php echo $param['email']; ?></p>
+
+                </div>
+            </div>
+
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23551.649258475583!2d2.557043796550918!3d44.3635656386586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b27d9d6875ad6d%3A0x9b8b9a75d5317ec2!2sIUT%20(Institut%20Universitaire%20de%20Technologie)!5e0!3m2!1sfr!2sfr!4v1574679373671!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </div>
     </div>

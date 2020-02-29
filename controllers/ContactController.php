@@ -18,6 +18,7 @@ class ContactController
         $view = new View("/views/visible/contact");
         $view->setVar("mentions", global_model::getMentionsLegales($pdo));
         $view->setVar("mentionsForm", parametres_model::getMentionsContact($pdo));
+        $view->setVar("param", parametres_model::getParamApp($pdo));
         $view->setVar('page', 'contact');
         return $view;
     }
