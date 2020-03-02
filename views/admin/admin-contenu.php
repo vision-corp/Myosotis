@@ -59,7 +59,7 @@ use yasmf\HttpHelper;
                     ?>
                     <tr>
                         <td><?php echo $section[1]; ?></td>
-                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-sousTitre="<?php echo $section[1]; ?>">Modifier</a></td>
+                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-sousTitre="<?php echo $section[2]; ?>" >Modifier</a></td>
                         <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                     </tr>
                 <?php } ?>

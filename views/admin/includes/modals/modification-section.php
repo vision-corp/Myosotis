@@ -54,7 +54,7 @@
         let titre = button.data('titre');
         let sousTitre = button.data('sousTitre');
 
-        console.log(titre)
+        console.log(sousTitre)
         document.getElementById('titreModif').value = titre;
         document.getElementById('sousTitreModif').value = sousTitre;
         // document.getElementById('sousTitreModif').value = sousTitre;
