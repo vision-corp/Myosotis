@@ -59,7 +59,7 @@ use yasmf\HttpHelper;
                     ?>
                     <tr>
                         <td><?php echo $section[1]; ?></td>
-                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" >Modifier</a></td>
+                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-sousTitre="<?php echo $section[1]; ?>">Modifier</a></td>
                         <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
                     </tr>
                 <?php } ?>
@@ -90,7 +90,8 @@ use yasmf\HttpHelper;
                     ?>
                     <tr>
                         <td><?php echo $section[1]; ?></td>
-                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>"  data-sousTitre="<?php echo $section[2]; ?>" data-image="<?php echo $section[3]; ?>" data-contenu="<?php echo $section[4]; ?>" data-pos="<?php echo $section[5]; ?>">Modifier</a></td>
+<!--                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="--><?php //echo $section[0]; ?><!--" data-titre="--><?php ///*echo $section[1];*/ echo "test"; ?><!--" data-sousTitre="--><?php //echo $section[2]; ?><!--" data-image="--><?php //echo $section[3]; ?><!--" data-contenu="--><?php //echo $section[4]; ?><!--" data-pos="--><?php //echo $section[5]; ?><!--">Modifier</a></td>-->
+                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-titreModif="test">Modifier</a></td>
                         <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal" data-idSuppr="<?php echo $section[0]; ?>">Supprimer</a></td>
                     </tr>
                 <?php } ?>
@@ -99,6 +100,5 @@ use yasmf\HttpHelper;
         </div>
     </div>
 </main>
-<script src="/js/sections.js"></script>
 <!-- footer -->
 <?php require 'includes/footer.php'; ?>
