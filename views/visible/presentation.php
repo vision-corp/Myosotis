@@ -17,52 +17,31 @@ require 'includes/header.php';
     <br/>
     <h1>Présentation</h1>
 
-    <!-- Images + textes de présentation -->
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img src="/images/tableExterieur.jpg" class="img-thumbnail rounded">
-        </div>
+    <div class="container marketing">
+
+        <?php
+        $i = 0;
+        foreach ($sections as $section) {
+            $i++;
+            ?>
+            <!-- Images textes présentation + textes-->
+            <div class="row featurette">
+                <div class="col-md-7 <?php if ($i % 2 != 0){echo " order-md-2";}; ?>">
+                    <h2 class="featurette-heading"><?php echo $section[1]; ?><br/><span class="text-muted"><?php echo $section[2]; ?></span>
+                    </h2>
+                    <p class="lead"><?php echo $section[4]; ?></p>
+                </div>
+                <div class="col-md-5 <?php if ($i % 2 != 0){echo " order-md-1";}; ?>">
+                    <img src="/images/photoCorps1.JPG" class="img-thumbnail rounded">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+
+            <?php
+        }
+        ?>
     </div>
 
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-6 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-6 order-md-1">
-            <img src="/images/interieur.jpg" class="img-thumbnail rounded">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-            <img src="/images/fleursExterieur.JPG" class="img-thumbnail rounded">
-        </div>
-    </div>
-
-    <div class="row featurette">
-        <div class="col-md-6 order-md-2">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-6 order-md-1">
-            <img src="/images/batimentEntier.jpg" class="img-thumbnail rounded">
-        </div>
-    </div>
-
-    <hr class="featurette-divider">
 
     <!-- Liens de téléchargements de fichiers -->
     <h3>Téléchargements</h3>

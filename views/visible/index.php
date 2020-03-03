@@ -53,25 +53,30 @@ require 'includes/header.php';
 
 
 </div>
-<div class="container marketing">
-    <hr class="featurette-divider">
 
-    <!-- Images textes présentation + textes-->
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <div class="container marketing">
+
+        <?php
+        $i = 0;
+        foreach ($sections as $section) {
+            $i++;
+            ?>
+        <!-- Images textes présentation + textes-->
+        <div class="row featurette">
+            <div class="col-md-7 <?php if ($i % 2 != 0){echo " order-md-2";}; ?>">
+                <h2 class="featurette-heading"><?php echo $section[1]; ?><br/><span class="text-muted"><?php echo $section[2]; ?></span>
+                </h2>
+                <p class="lead"><?php echo $section[4]; ?></p>
+            </div>
+            <div class="col-md-5 <?php if ($i % 2 != 0){echo " order-md-1";}; ?>">
+                <img src="/images/photoCorps1.JPG" class="img-thumbnail rounded">
+            </div>
         </div>
-        <div class="col-md-5">
-            <img src="/images/photoCorps1.JPG" class="img-thumbnail rounded">
-        </div>
+            <hr class="featurette-divider">
+            <?php
+        }
+        ?>
     </div>
-
-    <hr class="featurette-divider">
-
-
-
-</div>
 
 <!-- Inclusion du footer -->
 <?php require 'includes/footer.php';?>

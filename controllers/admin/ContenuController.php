@@ -23,5 +23,50 @@ class ContenuController
         $view->setVar("presentation", section_model::getSection($pdo, "presentation"));
         return $view;
     }
+
+    public function deleteSection($pdo) {
+        ConnectHelpers::secureAdmin();
+        $id = HttpHelper::getParam('id');
+        section_model::deleteSection($pdo, $id);
+        return $this->index($pdo);
+    }
+
+    public function addSection($pdo) {
+        ConnectHelpers::secureAdmin();
+        $titre = HttpHelper::getParam('titre');
+        $sousTitre = HttpHelper::getParam('sousTitre');
+        $image = HttpHelper::getParam('image');
+        $contenu = HttpHelper::getParam('contenu');
+        $pos = HttpHelper::getParam('pos');
+        $page = HttpHelper::getParam('page');
+        if ($titre != null && $sousTitre != null && $image != null && $contenu != null && $pos != null && $page != null) {
+            section_model::addSection($pdo, $titre, $sousTitre, $pos, $image, $contenu, $page);
+
+        } else {
+            $_SESSION['err'] = "contenuAddSection";
+        }
+        return $this->index($pdo);
+    }
+
+    public function updateSection($pdo) {
+        ConnectHelpers::secureAdmin();
+        $titre = HttpHelper::getParam("titre");
+        $sousTitre = HttpHelper::getParam("sousTitre");
+        $image = HttpHelper::getParam("image");
+        $position = HttpHelper::getParam("pos");
+        $contenu = HttpHelper::getParam("contenu");
+        $id = HttpHelper::getParam("id");
+        if ($titre != null && $sousTitre != null && $position != null && $contenu != null && $id != null) {
+            if ($image == null) {
+                section_model::updateSectionWithoutImage($pdo, $id, $titre, $sousTitre, $position, $contenu);
+            } else {
+                section_model::updateSection($pdo, $id, $titre, $sousTitre, $position, $image, $contenu);
+            }
+        } else {
+            $_SESSION['err'] = "contenuUpdateSection";
+        }
+
+        return $this->index($pdo);
+    }
 }
 

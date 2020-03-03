@@ -25,7 +25,7 @@ use yasmf\HttpHelper;
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
         <!-- Titre de la page -->
-        <h1 class="h2">Paramètres de l'application</h1>
+        <h1 class="h2">Gestion du contenu</h1>
 
     </div>
 
@@ -46,7 +46,7 @@ use yasmf\HttpHelper;
                 <!-- Boutons pour ajouter un utilisateur -->
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
-                        <a class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modalAjoutSection">Ajouter une section</a>
+                        <a class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modalAjoutSection" data-page="accueil">Ajouter une section</a>
                     </div>
                 </div>
             </div>
@@ -59,8 +59,9 @@ use yasmf\HttpHelper;
                     ?>
                     <tr>
                         <td><?php echo $section[1]; ?></td>
-                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-sousTitre="<?php echo $section[2]; ?>" >Modifier</a></td>
-                        <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal">Supprimer</a></td>
+                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-soustitre="<?php echo $section[2]; ?>" data-image="<?php echo $section[3]; ?>" data-contenu="<?php echo htmlentities($section[4]); ?>" data-pos="<?php echo $section[5]; ?>">Modifier</a></td>
+<!--                        <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal" data-id="--><?php //echo $section[0]; ?><!--" >Supprimer</a></td>-->
+                        <td class="cellModifier"><a href="/?controller=contenu&mode=admin&action=deleteSection&id=<?php echo $section[0]; ?>" class="text-danger">Supprimer</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -77,7 +78,7 @@ use yasmf\HttpHelper;
                 <!-- Boutons pour ajouter un utilisateur -->
                 <div class="btn-toolbar mb-2 mb-md-0">
                     <div class="btn-group mr-2">
-                        <a class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modalAjoutSection">Ajouter une section</a>
+                        <a class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#modalAjoutSection" data-page="presentation">Ajouter une section</a>
                     </div>
                 </div>
             </div>
@@ -90,9 +91,9 @@ use yasmf\HttpHelper;
                     ?>
                     <tr>
                         <td><?php echo $section[1]; ?></td>
-<!--                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="--><?php //echo $section[0]; ?><!--" data-titre="--><?php ///*echo $section[1];*/ echo "test"; ?><!--" data-sousTitre="--><?php //echo $section[2]; ?><!--" data-image="--><?php //echo $section[3]; ?><!--" data-contenu="--><?php //echo $section[4]; ?><!--" data-pos="--><?php //echo $section[5]; ?><!--">Modifier</a></td>-->
-                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-titreModif="test">Modifier</a></td>
-                        <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal" data-idSuppr="<?php echo $section[0]; ?>">Supprimer</a></td>
+                        <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-soustitre="<?php echo $section[2]; ?>" data-image="<?php echo $section[3]; ?>" data-contenu="<?php echo htmlentities($section[4]); ?>" data-pos="<?php echo $section[5]; ?>">Modifier</a></td>
+<!--                        <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal" data-id="--><?php //echo $section[0]; ?><!--" >Supprimer</a></td>-->
+                        <td class="cellModifier"><a href="/?controller=contenu&mode=admin&action=deleteSection&id=<?php echo $section[0]; ?>" class="text-danger">Supprimer</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
