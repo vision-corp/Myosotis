@@ -1,5 +1,5 @@
 /*!
-FullCalendar Google Calendar Plugin v4.3.0
+FullCalendar Google Calendar Plugin v4.4.0
 Docs & License: https://fullcalendar.io/
 (c) 2019 Adam Shaw
 */
@@ -42,6 +42,7 @@ Docs & License: https://fullcalendar.io/
         url: String,
         googleCalendarApiKey: String,
         googleCalendarId: String,
+        googleCalendarApiBase: String,
         data: null
     };
     var eventSourceDef = {
@@ -106,7 +107,11 @@ Docs & License: https://fullcalendar.io/
         }
     }
     function buildUrl(meta) {
-        return API_BASE + '/' + encodeURIComponent(meta.googleCalendarId) + '/events';
+        var apiBase = meta.googleCalendarApiBase;
+        if (!apiBase) {
+            apiBase = API_BASE;
+        }
+        return apiBase + '/' + encodeURIComponent(meta.googleCalendarId) + '/events';
     }
     function buildRequestParams(range, apiKey, extraParams, dateEnv) {
         var params;
