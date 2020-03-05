@@ -26,4 +26,10 @@ class HttpHelper
         return null;
     }
 
+    public static function getFile($name)
+    {
+        if (isset($_FILES[$name])) return $_FILES[$name];
+        return null;
+    }
+
 }

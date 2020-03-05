@@ -44,5 +44,6 @@
 
 </main>
 
+<script src="/js/planning.js"></script>
 <!-- footer -->
 <?php require 'includes/footer.php'; ?>

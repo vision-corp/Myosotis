@@ -1,29 +1,46 @@
 <?php
-//
-//
-//namespace yasmf;
-//
-//
-//class ImgHelpers
-//{
-//    public static function upload_img() {
-//
-//        $output_dir = "/images/uploads";//Path for file upload
-//        $fileCount = count($_FILES["image"]['name']);
-//        $RandomNum = time();
-//        $ImageName = str_replace(' ','-',strtolower($_FILES['image']['name'][$i]));
-//        $ImageType = $_FILES['image']['type'][$i]; //"image/png", image/jpeg etc.
-//        $ImageExt = substr($ImageName, strrpos($ImageName, '.'));
-//        $ImageExt = str_replace('.','',$ImageExt);
-//        $ImageName = preg_replace("/\.[^.\s]{3,4}$/", "", $ImageName);
-//        $NewImageName = $ImageName.'-'.$RandomNum.'.'.$ImageExt;
-//        $ret[$NewImageName]= $output_dir.$NewImageName;
-//        move_uploaded_file($_FILES["image"]["tmp_name"][$i],$output_dir."/".$NewImageName );
-//        $data = array(
-//            'image' =>$NewImageName
-//        );
-//        $this->model->file_details($data);
-//        echo "Image Uploaded Successfully";
-//
-//    }
-//}
+
+
+namespace yasmf;
+
+
+class ImgHelpers
+{
+    const MAXSIZE = 1000000;
+    const DOSSIER_UPLOAD = "images/uploads";
+    public static function upload_img($file) {
+
+        $fileName = $file['name'];
+        $fileTmpName = $file['tmp_name'];
+        $fileSize = $file['size'];
+        $fileError = $file['error'];
+        $fileType = $file['type'];
+
+        $fileExt = explode('.', $fileName);
+        $fileActualExt = strtolower(end($fileExt));
+
+        $allowed = array('jpg', 'jpeg', 'png', 'gif');
+
+        $_SESSION['imgErr'] = null;
+
+        if (in_array($fileActualExt, $allowed)) {
+            if ($fileError === 0) {
+                if ($fileSize < self::MAXSIZE) {
+                    $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                    $fileDestination = self::DOSSIER_UPLOAD . $fileNameNew;
+                    move_uploaded_file($fileTmpName, $fileDestination);
+                    return $fileDestination;
+                } else {
+                    $_SESSION['imgErr'] = "Ce fichier est trop lourd";
+                    return null;
+                }
+            } else {
+                $_SESSION['imgErr'] = "Une erreur est apparue lors du téléchargement du fichier";
+                return null;
+            }
+        } else {
+            $_SESSION['imgErr'] = "Un fichier de ce type ne peut pas être utilisé.";
+            return null;
+        }
+    }
+}

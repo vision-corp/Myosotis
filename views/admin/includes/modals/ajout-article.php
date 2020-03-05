@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/?controller=articlesAdmin&mode=admin&action=ajoutArticle" id="formAjout">
+                <form method="POST" action="/?controller=articlesAdmin&mode=admin&action=ajoutArticle" id="formAjout" enctype="multipart/form-data">
                     <div class="" role="" id="messageAjout"></div>
                     <div class="form-group">
                         <label for="titre" class="col-form-label">Titre :</label>

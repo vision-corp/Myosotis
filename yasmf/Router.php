@@ -23,7 +23,7 @@ class Router
 {
     public function route($dataSource)
     {
-//        try {
+        try {
             // set the controller to enrole
             if ($mode = HttpHelper::getParam('mode') == "admin") {
                 $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
@@ -43,8 +43,8 @@ class Router
             $view = $controller->$action($dataSource->getPdo());
             // render the view
             $view->render();
-//        } catch (\Error $e) {
-//            header("Location: index.php");
-//        }
+       } catch (\Error $e) {
+            //header("Location: index.php");
+       }
     }
 }

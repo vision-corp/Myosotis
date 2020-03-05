@@ -42,13 +42,14 @@ class ArticlesAdminController implements Controller
 
         $titre = HttpHelper::getParam('titre');
         $sousTitre = HttpHelper::getParam('sousTitre');
-        $image = HttpHelper::getParam('image');
+        $file = HttpHelper::getFile('fichier');
         $txtEditor = HttpHelper::getParam('txtEditor');
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
+        $image = ImgHelpers::upload_img($file);
+
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
-            $newImg = ImgHelpers::upload_img();
-            articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $newImg, $txtEditor, $date);
+            articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date);
             $reussite = true;
         } else {
             $_SESSION['erreursArticles'] = "L'article n'a pas pu être enregistré";
