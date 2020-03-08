@@ -11,6 +11,7 @@ use yasmf\ConnectHelpers;
 use yasmf\HttpHelper;
 use yasmf\View;
 use model\section_model;
+use yasmf\Config;
 
 
 class ContenuController
@@ -18,9 +19,10 @@ class ContenuController
     public function index($pdo)
     {
         ConnectHelpers::secureAdmin();
-        $view = new View("/views/admin/admin-contenu");
+        $view = new View(Config::getRacine()."/views/admin/admin-contenu");
         $view->setVar("accueil", section_model::getSection($pdo, "accueil"));
         $view->setVar("presentation", section_model::getSection($pdo, "presentation"));
+        $view->setVar('RACINE', Config::getRacine());
         return $view;
     }
 

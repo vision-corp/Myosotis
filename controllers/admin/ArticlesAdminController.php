@@ -13,6 +13,7 @@ use yasmf\View;
 use yasmf\Controller;
 use model\articles_admin_model;
 use yasmf\ImgHelpers;
+use yasmf\Config;
 
 /**
  * Class ArticlesAdminController de la partie ADMIN
@@ -24,10 +25,11 @@ class ArticlesAdminController implements Controller
     public function index($pdo)
     {
         ConnectHelpers::secureAdmin();
-        $view = new View("/views/admin/admin-articles");
+        $view = new View(Config::getRacine()."/views/admin/admin-articles");
         $article = articles_admin_model::lireArticle($pdo);
         $view->setVar('liste', $article);
         $_SESSION['erreursArticles'] = null;
+        $view->setVar('RACINE', Config::getRacine());
         return $view;
     }
 
@@ -42,12 +44,10 @@ class ArticlesAdminController implements Controller
 
         $titre = HttpHelper::getParam('titre');
         $sousTitre = HttpHelper::getParam('sousTitre');
-        $file = HttpHelper::getFile('fichier');
         $txtEditor = HttpHelper::getParam('txtEditor');
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
-
-        $image = ImgHelpers::upload_img($file);
-
+        $image = HttpHelper::getParam('image');
+        //if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
             articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date);
             $reussite = true;

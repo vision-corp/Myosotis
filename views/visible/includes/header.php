@@ -14,8 +14,8 @@
     <title>Les Myosotis</title>
 
     <!-- Fichiers Css -->
-    <link href="../css/bootstrap.css" rel="stylesheet">
-    <link href="../css/visible.css" rel="stylesheet">
+    <link href="<?php echo $RACINE; ?>/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo $RACINE; ?>/css/visible.css" rel="stylesheet">
 </head>
 <body>
 

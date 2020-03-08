@@ -9,11 +9,8 @@
             </div>
             <div class="modal-body">
                 <form method="POST" action="/?controller=articlesAdmin&mode=admin&action=modifierArticle" id="formModif">
-
                     <!-- Message d'erreur si tous les champs ne sont pas valides -->
                     <div class="" role="" id="messageModif"></div>
-
-
                     <!-- Fin message d'erreur -->
                     <div class="form-group">
                         <label for="titre" class="col-form-label">Titre :</label>
@@ -36,6 +33,7 @@
                         <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
                         <script>tinymce.init({selector:'textarea'});</script>
                     </div>
+
                     <input type="hidden" name="idModif" id="idModif">
 
                     <div class="modal-footer">

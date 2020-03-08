@@ -9,6 +9,7 @@ namespace controllers\admin;
 use yasmf\ConnectHelpers;
 use yasmf\HttpHelper;
 use yasmf\View;
+use yasmf\Config;
 
 
 class AdminController
@@ -16,7 +17,8 @@ class AdminController
     public function index()
     {
         ConnectHelpers::secure();
-        $view = new View("/views/admin/admin");
+        $view = new View(Config::getRacine()."/views/admin/admin");
+        $view->setVar('RACINE', Config::getRacine());
         return $view;
     }
 }

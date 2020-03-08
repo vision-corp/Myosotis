@@ -11,31 +11,31 @@ if (session_status() == PHP_SESSION_NONE) {
     <title>Les Myosotis - ADMR</title>
 
     <!--CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link href="/css/calendrier.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $RACINE; ?>/css/bootstrap.css">
+    <link href="<?php echo $RACINE; ?>/css/calendrier.css" rel="stylesheet">
 
     <!-- Css perso -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="<?php echo $RACINE; ?>/css/style.css" rel="stylesheet">
 
 
-    <link href='/fullcalendar/packages/core/main.css' rel='stylesheet' />
-    <link href='/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
-    <link href='/fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
-    <link href='/fullcalendar/packages/list/main.css' rel='stylesheet' />
-    <script src='/fullcalendar/packages/core/main.js'></script>
-    <script src='/fullcalendar/packages/core/s-all.js'></script>
-    <script src='/fullcalendar/packages/interaction/main.js'></script>
-    <script src='/fullcalendar/packages/daygrid/main.js'></script>
-    <script src='/fullcalendar/packages/timegrid/main.js'></script>
-    <script src='/fullcalendar/packages/list/main.js'></script>
+    <link href='<?php echo $RACINE; ?>/fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='<?php echo $RACINE; ?>/fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    <link href='<?php echo $RACINE; ?>/fullcalendar/packages/timegrid/main.css' rel='stylesheet' />
+    <link href='<?php echo $RACINE; ?>/fullcalendar/packages/list/main.css' rel='stylesheet' />
+    <script src='<?php //echo $RACINE; ?>/fullcalendar/packages/core/main.js'></script>
+    <script src='<?php echo $RACINE; ?>/fullcalendar/packages/core/locales-all.js'></script>
+    <script src='<?php echo $RACINE; ?>/fullcalendar/packages/interaction/main.js'></script>
+    <script src='<?php echo $RACINE; ?>/fullcalendar/packages/daygrid/main.js'></script>
+    <script src='<?php echo $RACINE; ?>/fullcalendar/packages/timegrid/main.js'></script>
+    <script src='<?php echo $RACINE; ?>/fullcalendar/packages/list/main.js'></script>
 
 </head>
 
 <body>
 
-<script src="/js/jquery.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/perso.js"></script>
+<script src="<?php echo $RACINE; ?>/js/jquery.js"></script>
+<script src="<?php echo $RACINE; ?>/js/bootstrap.js"></script>
+<script src="<?php echo $RACINE; ?>/js/perso.js"></script>
 
 
 <!-- Menu horizontal -->

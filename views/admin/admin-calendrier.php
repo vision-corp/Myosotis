@@ -25,17 +25,6 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
             </div>
 
-            <!-- Sélection semaine -->
-            <div class="dropdown">
-                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Cette semaine
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Semaine 33</a>
-                    <a class="dropdown-item" href="#">Semaine 34</a>
-                    <a class="dropdown-item" href="#">Semaine 35</a>
-                </div>
-            </div>
         </div>
     </div>
 
@@ -44,6 +33,6 @@
 
 </main>
 
-<script src="/js/planning.js"></script>
+<script src="<?php echo $RACINE; ?>/js/planning.js"></script>
 <!-- footer -->
 <?php require 'includes/footer.php'; ?>

@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="POST" action="/?controller=articlesAdmin&mode=admin&action=ajoutArticle" id="formAjout" enctype="multipart/form-data">
+                <form method="POST" action="/?controller=articlesAdmin&mode=admin&action=ajoutArticle" id="formAjout">
                     <div class="" role="" id="messageAjout"></div>
                     <div class="form-group">
                         <label for="titre" class="col-form-label">Titre :</label>
@@ -21,7 +21,7 @@
 
                     <div class="form-group">
                         <label for="image">Insérer une image</label>
-                        <input name="fichier" type="file" id="fichier_a_uploader" class="form-control-file"/>
+                        <input name="image" type="file" id="image" class="form-control-file"/>
 
                     </div>
 
@@ -49,15 +49,15 @@
 
     document.getElementById("formAjout").addEventListener("submit", function (e) {
 
-        var erreur;
-        var modifTitre = document.getElementById("titre")
-        var modifSousTitre = document.getElementById("sousTitre")
-        var modifImage = document.getElementById("image")
-        //var modifTxtEditor = document.getElementById("txtEditor")
-        var modifTxtEditor = tinymce.activeEditor.getContent()
+        let erreur;
+        let modifTitre = document.getElementById("titre")
+        let modifSousTitre = document.getElementById("sousTitre")
+        let modifImage = document.getElementById("image")
+        //let modifTxtEditor = document.getElementById("txtEditor")
+        let modifTxtEditor = tinymce.activeEditor.getContent()
         if ((!modifTxtEditor) || (modifTxtEditor.length <= 2)) {
-            erreur = "Veuillez ajouter du contenu à l'article."
-        }
+              erreur = "Veuillez ajouter du contenu à l'article."
+          }
 
         if ((!modifImage.value) || (modifImage.value.length <= 2)) {
             erreur = "Veuillez ajouter une image."

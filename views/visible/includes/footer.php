@@ -11,7 +11,7 @@
     <p>Les Myosotis · <a href="/views/visible/index.php" data-toggle="modal" data-target="#modal-mentionsl-legales">Mentions légales</a>
 </footer>
 </main>
-<script src="../js/jquery.js"></script>
+<script src="<?php echo $RACINE; ?>/js/jquery.js"></script>
 <script>window.jQuery || document.write('<script src="../js/jquery.js"><\/script>')</script><script src="../js/bootstrap.js"></script>
 </body>
 </html>

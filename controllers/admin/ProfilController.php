@@ -12,13 +12,14 @@ use yasmf\View;
 use yasmf\FormHelpers;
 use model\UsersServices;
 use yasmf\ConnectHelpers;
+use yasmf\Config;
 
 class ProfilController
 {
     public function index($pdo, $erreurs = null, $userInfo = null)
     {
         ConnectHelpers::secure();
-        $view = new View("/views/admin/profil");
+        $view = new View(Config::getRacine()."/views/admin/profil");
 
         if ($erreurs === null) {
             $view->setVar("prenom", $_SESSION['user_prenom']);
@@ -34,6 +35,7 @@ class ProfilController
         $view->setVar("id", $_SESSION['user_id']);
         $view->setVar("admin", $_SESSION['user_admin']);
         $view->setVar("erreurs", $erreurs);
+        $view->setVar('RACINE', Config::getRacine());
 
         return $view;
     }

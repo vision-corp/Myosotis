@@ -11,14 +11,16 @@ use yasmf\ConnectHelpers;
 use yasmf\HttpHelper;
 use yasmf\View;
 use model\UsersServices;
+use yasmf\Config;
 
 
 class ConnexionController
 {
     public function index($pdo, $err = false)
     {
-        $view = new View("/views/admin/connexion");
+        $view = new View(Config::getRacine()."/views/admin/connexion");
         $view->setVar("err", $err);
+        $view->setVar('RACINE', Config::getRacine());
         return $view;
     }
     public function connect($pdo) {

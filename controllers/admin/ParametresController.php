@@ -11,6 +11,7 @@ use yasmf\ConnectHelpers;
 use yasmf\HttpHelper;
 use yasmf\View;
 use model\parametres_model;
+use yasmf\Config;
 
 
 class ParametresController
@@ -18,9 +19,10 @@ class ParametresController
     public function index($pdo)
     {
         ConnectHelpers::secureAdmin();
-        $view = new View("/views/admin/admin-parametres");
+        $view = new View(Config::getRacine()."/views/admin/admin-parametres");
         $view->setVar("optn", parametres_model::getParamApp($pdo));
         $view->setVar("tel", parametres_model::getTelechargements($pdo));
+        $view->setVar('RACINE', Config::getRacine());
         return $view;
     }
 

@@ -13,15 +13,17 @@ use yasmf\Controller;
 use yasmf\FormHelpers;
 use model\UsersServices;
 use yasmf\ConnectHelpers;
+use yasmf\Config;
 
 class UtilisateursController implements Controller
 {
     public function index($pdo, $modal = NULL)
     {
         ConnectHelpers::secureAdmin();
-        $view = new View("/views/admin/admin-membres");
+        $view = new View(Config::getRacine()."/views/admin/admin-membres");
         $view->setVar('users', UsersServices::getUsers($pdo));
         $view->setVar('modal', $modal);
+        $view->setVar('RACINE', Config::getRacine());
         return $view;
     }
     public function newUser($pdo) {

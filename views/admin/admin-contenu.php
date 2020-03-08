@@ -60,8 +60,7 @@ use yasmf\HttpHelper;
                     <tr>
                         <td><?php echo $section[1]; ?></td>
                         <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-soustitre="<?php echo $section[2]; ?>" data-image="<?php echo $section[3]; ?>" data-contenu="<?php echo htmlentities($section[4]); ?>" data-pos="<?php echo $section[5]; ?>">Modifier</a></td>
-<!--                        <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal" data-id="--><?php //echo $section[0]; ?><!--" >Supprimer</a></td>-->
-                        <td class="cellModifier"><a href="/?controller=contenu&mode=admin&action=deleteSection&id=<?php echo $section[0]; ?>" class="text-danger">Supprimer</a></td>
+                        <td class="cellModifier"><a href="#" data-toggle="modal" class="text-danger" data-target="#supprSection" data-id="<?php echo $section[0]; ?>" >Supprimer</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>
@@ -93,7 +92,7 @@ use yasmf\HttpHelper;
                         <td><?php echo $section[1]; ?></td>
                         <td class="cellModifier"><a href="#" data-toggle="modal" data-target="#modalModificationSection" data-id="<?php echo $section[0]; ?>" data-titre="<?php echo $section[1]; ?>" data-soustitre="<?php echo $section[2]; ?>" data-image="<?php echo $section[3]; ?>" data-contenu="<?php echo htmlentities($section[4]); ?>" data-pos="<?php echo $section[5]; ?>">Modifier</a></td>
 <!--                        <td class="cellModifier"><a href="#" class="text-danger" data-toggle="modal" data-target="#supprSectionModal" data-id="--><?php //echo $section[0]; ?><!--" >Supprimer</a></td>-->
-                        <td class="cellModifier"><a href="/?controller=contenu&mode=admin&action=deleteSection&id=<?php echo $section[0]; ?>" class="text-danger">Supprimer</a></td>
+<!--                        <td class="cellModifier"><a href="/?controller=contenu&mode=admin&action=deleteSection&id=--><?php //echo $section[0]; ?><!--" class="text-danger">Supprimer</a></td>-->
                     </tr>
                 <?php } ?>
                 </tbody>
