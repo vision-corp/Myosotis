@@ -6817,7 +6817,7 @@ Docs & License: https://fullcalendar.io/
             var viewType = state.viewType;
             var viewSpec = this.viewSpecs[viewType];
             if (!viewSpec) {
-                throw new Error("View type \"" + viewType + "\" is not valid");
+                throw new Error("view type \"" + viewType + "\" is not valid");
             }
             // if event sources are still loading and progressive rendering hasn't been enabled,
             // keep rendering the last fully loaded set of events
@@ -6995,7 +6995,7 @@ Docs & License: https://fullcalendar.io/
             }
             this.afterSizingTriggers = {};
         };
-        // View
+        // view
         // -----------------------------------------------------------------------------------------------------------------
         // Returns a boolean about whether the view is okay to instantiate at some point
         Calendar.prototype.isValidViewType = function (viewType) {

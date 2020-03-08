@@ -2,7 +2,7 @@
 
 namespace yasmf;
 
-interface Controller
+interface controller
 {
     public function index($pdo);
 

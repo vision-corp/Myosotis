@@ -1,9 +1,9 @@
 <?php
 spl_autoload_extensions(".php");
 spl_autoload_register();
-use yasmf\DataSource;
-use yasmf\Router;
-$dataSource = new DataSource(
+use yasmf\datasource;
+use yasmf\router;
+$dataSource = new datasource(
     $host = 'localhost',
     $port = '8889',
     $db = 'myosotis',
@@ -11,5 +11,5 @@ $dataSource = new DataSource(
     $pass = 'root',
     $charset = 'utf8mb4'
 );
-$router = new Router() ;
+$router = new router() ;
 $router->route($dataSource);

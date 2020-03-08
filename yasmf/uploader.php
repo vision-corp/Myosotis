@@ -1,6 +1,6 @@
 <?php
 namespace yasmf;
-class Uploader {
+class uploader {
 
     /**
      * If the value is set to a relative path, then the given path is

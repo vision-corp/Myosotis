@@ -2,14 +2,14 @@
 
 
 namespace yasmf;
-use yasmf\Config;
+use yasmf\config;
 
 
-class ImgHelpers
+class imghelpers
 {
     const MAXSIZE = 1000000;
     public static function upload_img($file) {
-        $DOSSIER_UPLOAD = Config::getRacine() . "/images/uploads";
+        $DOSSIER_UPLOAD = config::getRacine() . "/images/uploads";
 
         $fileName = $file['name'];
         $fileTmpName = $file['tmp_name'];

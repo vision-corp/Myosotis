@@ -1,5 +1,5 @@
 /*!
-FullCalendar List View Plugin v4.4.0
+FullCalendar List view Plugin v4.4.0
 Docs & License: https://fullcalendar.io/
 (c) 2019 Adam Shaw
 */

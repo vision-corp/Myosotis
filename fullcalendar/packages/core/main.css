@@ -802,7 +802,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   border-style: solid;
 }
 
-/* List View
+/* List view
 --------------------------------------------------------------------------------------------------*/
 .fc-unthemed .fc-list-item:hover td {
   background-color: #f5f5f5;
@@ -834,7 +834,7 @@ Lots taken from Flatly (MIT): https://bootswatch.com/4/flatly/bootstrap.css
   margin: 0;
 }
 
-/* View Structure
+/* view Structure
 --------------------------------------------------------------------------------------------------*/
 .fc-view-container {
   position: relative;

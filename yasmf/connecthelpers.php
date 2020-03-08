@@ -4,7 +4,7 @@
 namespace yasmf;
 
 
-class ConnectHelpers
+class connecthelpers
 {
     public static function secure() {
         if (session_status() == PHP_SESSION_NONE) {

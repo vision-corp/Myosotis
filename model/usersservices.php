@@ -2,7 +2,7 @@
 
 namespace model;
 
-class UsersServices {
+class usersservices {
 
   public static function registerUser($pdo, $prenom, $nom, $pseudo, $email, $password) {
     $passCrypt = password_hash($password, PASSWORD_BCRYPT);

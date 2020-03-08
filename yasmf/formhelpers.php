@@ -2,9 +2,9 @@
 
 namespace yasmf;
 
-use services\UsersServices;
+use services\usersservices;
 
-class FormHelpers
+class formhelpers
 {
     public static function check_email_addressSTUB($email)
     {

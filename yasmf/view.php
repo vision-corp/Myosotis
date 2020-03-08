@@ -17,34 +17,24 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 namespace yasmf;
-use PDO;
-class  DataSource
+class view
 {
-    private $host;
-    private $port;
-    private $db;
-    private $user;
-    private $pass;
-    private $charset;
-    public function __construct($host, $port, $db, $user, $pass, $charset)
+    private $relativePath;
+    private $viewParams = array();
+    public function __construct($relativePath)
     {
-        $this->host = $host;
-        $this->port = $port;
-        $this->db = $db;
-        $this->user = $user;
-        $this->pass = $pass;
-        $this->charset = $charset;
+        $this->relativePath = $relativePath;
     }
-    public function getPDO()
+    public function setVar($key, $value)
     {
-        $dsn = "mysql:host=$this->host;port=$this->port;dbname=$this->db;charset=$this->charset";
-        $options = [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES => false,
-            PDO::ATTR_PERSISTENT => true
-        ];
-        $pdo = new PDO($dsn, $this->user, $this->pass, $options);
-        return $pdo;
+        $this->viewParams[$key] = $value;
+        return $this;
+    }
+    public function render()
+    {
+        // convert view params in variables accessible by the php file
+        extract($this->viewParams);
+        // "enrole" the php file used to build and send the response
+        require_once $_SERVER['DOCUMENT_ROOT'] . "/$this->relativePath.php";
     }
 }

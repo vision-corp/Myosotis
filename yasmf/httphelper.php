@@ -17,24 +17,19 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 namespace yasmf;
-class View
+class httphelper
 {
-    private $relativePath;
-    private $viewParams = array();
-    public function __construct($relativePath)
+    public static function getParam($name)
     {
-        $this->relativePath = $relativePath;
+        if (isset($_GET[$name])) return $_GET[$name];
+        if (isset($_POST[$name])) return $_POST[$name];
+        return null;
     }
-    public function setVar($key, $value)
+
+    public static function getFile($name)
     {
-        $this->viewParams[$key] = $value;
-        return $this;
+        if (isset($_FILES[$name])) return $_FILES[$name];
+        return null;
     }
-    public function render()
-    {
-        // convert view params in variables accessible by the php file
-        extract($this->viewParams);
-        // "enrole" the php file used to build and send the response
-        require_once $_SERVER['DOCUMENT_ROOT'] . "/$this->relativePath.php";
-    }
+
 }

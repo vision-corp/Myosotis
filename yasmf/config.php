@@ -4,7 +4,7 @@
 namespace yasmf;
 
 
-class Config
+class config
 {
      const RACINE = "";
      public static function getRacine() {

@@ -1,35 +1,35 @@
 <?php
 /**
- * ArticlesAdminController.php
+ * articlesadmincontroller.php
  * author Info2 IUT Rodez 2019-2020
  *
  */
 
 namespace controllers\admin;
 
-use yasmf\ConnectHelpers;
-use yasmf\HttpHelper;
-use yasmf\View;
-use yasmf\Controller;
+use yasmf\connecthelpers;
+use yasmf\httphelper;
+use yasmf\view;
+use yasmf\controller;
 use model\articles_admin_model;
-use yasmf\ImgHelpers;
-use yasmf\Config;
+use yasmf\imghelpers;
+use yasmf\config;
 
 /**
- * Class ArticlesAdminController de la partie ADMIN
+ * Class articlesadmincontroller de la partie ADMIN
  * @package controllers\admin
  */
-class ArticlesAdminController implements Controller
+class articlesadmincontroller implements controller
 {
 
     public function index($pdo)
     {
-        ConnectHelpers::secureAdmin();
-        $view = new View(Config::getRacine()."/views/admin/admin-articles");
+        connecthelpers::secureAdmin();
+        $view = new view(config::getRacine()."/views/admin/admin-articles");
         $article = articles_admin_model::lireArticle($pdo);
         $view->setVar('liste', $article);
         $_SESSION['erreursArticles'] = null;
-        $view->setVar('RACINE', Config::getRacine());
+        $view->setVar('RACINE', config::getRacine());
         return $view;
     }
 
@@ -39,14 +39,14 @@ class ArticlesAdminController implements Controller
      */
     public function ajoutArticle($pdo)
     {
-        ConnectHelpers::secureAdmin();
+        connecthelpers::secureAdmin();
         date_default_timezone_set('Europe/Paris');
 
-        $titre = HttpHelper::getParam('titre');
-        $sousTitre = HttpHelper::getParam('sousTitre');
-        $txtEditor = HttpHelper::getParam('txtEditor');
+        $titre = httphelper::getParam('titre');
+        $sousTitre = httphelper::getParam('sousTitre');
+        $txtEditor = httphelper::getParam('txtEditor');
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
-        $image = HttpHelper::getParam('image');
+        $image = httphelper::getParam('image');
         //if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
         if ($titre != null && $sousTitre != null && $image != null && $txtEditor != null) {
             articles_admin_model::creerArticle($pdo, $titre, $sousTitre, $image, $txtEditor, $date);
@@ -61,22 +61,22 @@ class ArticlesAdminController implements Controller
     }
 
     public function supprimerArticle($pdo) {
-        ConnectHelpers::secureAdmin();
-        $id = HttpHelper::getParam('id');
+        connecthelpers::secureAdmin();
+        $id = httphelper::getParam('id');
         articles_admin_model::supprimerArticle($pdo, $id);
         return $this->index($pdo);
     }
 
     public function modifierArticle($pdo) {
-        ConnectHelpers::secureAdmin();
+        connecthelpers::secureAdmin();
         date_default_timezone_set('Europe/Paris');
 
-        $id = HttpHelper::getParam('idModif');
+        $id = httphelper::getParam('idModif');
 
-        $titre = HttpHelper::getParam('titreModif');
-        $sousTitre = HttpHelper::getParam('sousTitreModif');
-        $image = HttpHelper::getParam('imageModif');
-        $txtEditor = HttpHelper::getParam('txtEditorModif');
+        $titre = httphelper::getParam('titreModif');
+        $sousTitre = httphelper::getParam('sousTitreModif');
+        $image = httphelper::getParam('imageModif');
+        $txtEditor = httphelper::getParam('txtEditorModif');
         $date = "Le " . date("d-m-Y") . " à " . date("H:i");
 
 

@@ -1,11 +1,11 @@
 <?php
 namespace controllers\admin;
 
-use yasmf\ConnectHelpers;
+use yasmf\connecthelpers;
 
-class LogoutController {
+class logoutcontroller {
     public function index() {
-        ConnectHelpers::secure();
+        connecthelpers::secure();
         unset($_SESSION['user_id']);
         unset($_SESSION['user_prenom']);
         unset($_SESSION['user_nom']);

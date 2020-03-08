@@ -19,26 +19,26 @@
 namespace yasmf;
 
 use controllers;
-class Router
+class router
 {
     public function route($dataSource)
     {
         try {
             // set the controller to enrole
-            if ($mode = HttpHelper::getParam('mode') == "admin") {
-                $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
-                $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
+            if ($mode = httphelper::getParam('mode') == "admin") {
+                $controllerName = httphelper::getParam('controller') ?: 'Connexion';
+                $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "controller";
             }elseif ($mode == "membre"){
-                $controllerName = HttpHelper::getParam('controller') ?: 'Connexion';
-                $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "Controller";
+                $controllerName = httphelper::getParam('controller') ?: 'Connexion';
+                $controllerQualifiedName = "controllers\\admin\\" . $controllerName . "controller";
             } else {
-                $controllerName = HttpHelper::getParam('controller') ?: 'Home';
-                $controllerQualifiedName = "controllers\\" . $controllerName . "Controller";
+                $controllerName = httphelper::getParam('controller') ?: 'Home';
+                $controllerQualifiedName = "controllers\\" . $controllerName . "controller";
             }
 
             $controller = new $controllerQualifiedName();
             // set the action to trigger
-            $action = HttpHelper::getParam('action') ?: 'index';
+            $action = httphelper::getParam('action') ?: 'index';
             // trigger the appropriate action and get the resulted view
             $view = $controller->$action($dataSource->getPdo());
             // render the view

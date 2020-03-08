@@ -1,37 +1,37 @@
 <?php
 /**
- * ConnexionController.php
+ * connexioncontroller.php
  * author Info2 IUT Rodez 2019-2020
  *
  */
 
 namespace controllers\admin;
 
-use yasmf\ConnectHelpers;
-use yasmf\HttpHelper;
-use yasmf\View;
-use model\UsersServices;
-use yasmf\Config;
+use yasmf\connecthelpers;
+use yasmf\httphelper;
+use yasmf\view;
+use model\usersservices;
+use yasmf\config;
 
 
-class ConnexionController
+class connexioncontroller
 {
     public function index($pdo, $err = false)
     {
-        $view = new View(Config::getRacine()."/views/admin/connexion");
+        $view = new view(config::getRacine()."/views/admin/connexion");
         $view->setVar("err", $err);
-        $view->setVar('RACINE', Config::getRacine());
+        $view->setVar('RACINE', config::getRacine());
         return $view;
     }
     public function connect($pdo) {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
         }
-        $pseudo = HttpHelper::getParam('pseudo');
-        $password = HttpHelper::getParam('password');
+        $pseudo = httphelper::getParam('pseudo');
+        $password = httphelper::getParam('password');
 
         if ($pseudo != null && $password != null) {
-            $user = UsersServices::getUser($pdo, $pseudo, $password);
+            $user = usersservices::getUser($pdo, $pseudo, $password);
 
             if ($user != null) {
                 $_SESSION['user_id'] = $user['id'];
