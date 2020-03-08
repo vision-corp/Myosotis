@@ -24,7 +24,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="pos">Sélectionnez un ordre d'affichage</label>
-                            <input type="number" class="form-control" id="posModif" name="pos">
+                            <input type="number" class="form-control" id="posModif" name="pos" min="0" max="50">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="image">Insérer une image</label>

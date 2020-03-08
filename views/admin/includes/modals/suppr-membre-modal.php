@@ -23,6 +23,6 @@
   $('#suppreMembreModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget)
   var id = button.data('id')
-  document.getElementById('suppr').href = '/?controller=utilisateurs&mode=admin&action=removeUser&id=' + id
+  document.getElementById('suppr').href = '/?controller=contenu&mode=admin&action=deleteSection&id=' + id
   })
 </script>
